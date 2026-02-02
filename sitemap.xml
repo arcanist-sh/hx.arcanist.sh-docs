@@ -16,6 +16,9 @@
         <loc>https://hx.raskell.io/docs/docs/commands/bench/</loc>
     </url>
     <url>
+        <loc>https://hx.raskell.io/docs/docs/commands/bhc-platform/</loc>
+    </url>
+    <url>
         <loc>https://hx.raskell.io/docs/docs/commands/build/</loc>
     </url>
     <url>
@@ -110,6 +113,9 @@
     </url>
     <url>
         <loc>https://hx.raskell.io/docs/docs/features/</loc>
+    </url>
+    <url>
+        <loc>https://hx.raskell.io/docs/docs/features/bhc-platform/</loc>
     </url>
     <url>
         <loc>https://hx.raskell.io/docs/docs/features/compiler-backends/</loc>
