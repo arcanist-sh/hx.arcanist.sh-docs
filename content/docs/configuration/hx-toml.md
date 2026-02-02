@@ -136,6 +136,46 @@ profile = "numeric"
 tensor_fusion = true
 ```
 
+## [bhc-platform]
+
+BHC Platform curated snapshot configuration. This is the BHC equivalent of Stackage — a curated set of packages verified to build together under BHC.
+
+```toml
+[bhc-platform]
+snapshot = "bhc-platform-2026.1"   # Curated package set
+allow_newer = false                # Allow packages outside the snapshot
+extra_deps = {}                    # Override specific package versions
+```
+
+### Fields
+
+| Field | Type | Default | Description |
+|-------|------|---------|-------------|
+| `snapshot` | string | none | BHC Platform snapshot identifier |
+| `allow_newer` | bool | `false` | Allow packages from Hackage outside the snapshot |
+| `extra_deps` | table | `{}` | Override specific package versions |
+
+### Examples
+
+```toml
+# Use a BHC Platform snapshot
+[compiler]
+backend = "bhc"
+
+[bhc-platform]
+snapshot = "bhc-platform-2026.1"
+
+# With overrides
+[bhc-platform]
+snapshot = "bhc-platform-2026.1"
+allow_newer = true
+extra_deps = { my-custom-lib = "1.0.0" }
+```
+
+> **Note:** BHC Platform snapshots are only applied when `[compiler].backend = "bhc"`. For GHC projects, use Stackage snapshots via `[toolchain].resolver`.
+
+See [hx bhc-platform](/docs/commands/bhc-platform) for CLI commands.
+
 ## [build]
 
 Build configuration.
@@ -415,4 +455,28 @@ exclude = [".git/**", "dist-newstyle/**"]
 
 [dependencies]
 lock-strategy = "hx"
+```
+
+### Complete BHC Example
+
+```toml
+[project]
+name = "ml-pipeline"
+version = "0.1.0"
+
+[compiler]
+backend = "bhc"
+
+[compiler.bhc]
+profile = "numeric"
+tensor_fusion = true
+
+[bhc-platform]
+snapshot = "bhc-platform-2026.1"
+
+[build]
+release = true
+
+[test]
+fail-fast = true
 ```

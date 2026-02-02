@@ -48,6 +48,7 @@ Commands for managing the Haskell toolchain.
 | Command | Description |
 |---------|-------------|
 | [toolchain](/docs/commands/toolchain) | Manage GHC, Cabal, and other tools |
+| [bhc-platform](/docs/commands/bhc-platform) | Manage BHC Platform curated snapshots |
 
 ### Utilities
 Additional utility commands.

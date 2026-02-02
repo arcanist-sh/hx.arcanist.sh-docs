@@ -53,6 +53,14 @@ hx init --force
 hx init --ghc 9.8.2
 ```
 
+### Initialize with BHC Backend
+
+```bash
+hx init --backend bhc
+```
+
+This sets `[compiler].backend = "bhc"` in the generated `hx.toml` with sensible defaults for the BHC profile.
+
 ## What It Does
 
 1. **Detects existing configuration**
@@ -150,4 +158,5 @@ hx lock
 ## See Also
 
 - [hx new](/docs/commands/new) — Create new project
+- [Compiler Backends](/docs/features/compiler-backends) — GHC vs BHC
 - [Configuration Reference](/docs/configuration/hx-toml)

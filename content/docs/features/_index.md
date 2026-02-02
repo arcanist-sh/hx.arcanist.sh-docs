@@ -38,6 +38,7 @@ hx provides a modern, unified interface for Haskell development with these key f
 ## Feature Sections
 
 - **[Compiler Backends](/docs/features/compiler-backends)** — GHC and BHC support
+- **[BHC Platform](/docs/features/bhc-platform)** — Curated package snapshots for BHC
 - **[Cross-Compilation](/docs/features/cross-compilation)** — Building for other platforms
 - **[Toolchain Management](/docs/features/toolchain)** — Managing GHC, Cabal, BHC
 - **[Lockfiles](/docs/features/lockfiles)** — Reproducible builds

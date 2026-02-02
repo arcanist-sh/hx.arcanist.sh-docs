@@ -59,6 +59,24 @@ hx new my-app --exe
 hx new my-minimal --minimal
 ```
 
+#### Specialized Templates
+
+```bash
+# Web application
+hx new webapp my-app
+
+# CLI tool
+hx new cli my-tool
+
+# Numeric computing (BHC backend, hmatrix, vector, massiv)
+hx new numeric my-science
+
+# Web server (BHC backend, Servant, Warp, WAI)
+hx new server my-api
+```
+
+The `numeric` and `server` templates use the BHC backend with optimized profiles. See [Compiler Backends](/docs/features/compiler-backends) for more on BHC.
+
 ## Build Your Project
 
 Compile your project:

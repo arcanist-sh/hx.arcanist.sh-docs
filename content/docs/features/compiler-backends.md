@@ -66,9 +66,17 @@ target = "aarch64-linux-gnu" # Cross-compilation target
 
 ### Usage
 
+All major commands support the BHC backend:
+
 ```bash
 # Build with BHC
 hx build --backend bhc
+
+# Test with BHC
+hx test --backend bhc
+
+# Run with BHC
+hx run --backend bhc
 
 # Set in hx.toml to always use BHC
 # [compiler]
@@ -269,6 +277,63 @@ hx toolchain list
 - Optimizing for embedded/edge
 - Cross-compiling to ARM
 
+## BHC Platform Snapshots
+
+BHC Platform provides curated package sets — the BHC equivalent of Stackage. Each snapshot contains packages verified to build and work together under BHC.
+
+### Configuration
+
+```toml
+[compiler]
+backend = "bhc"
+
+[bhc-platform]
+snapshot = "bhc-platform-2026.1"
+```
+
+### CLI Commands
+
+```bash
+# List available snapshots
+hx bhc-platform list
+
+# Show snapshot details
+hx bhc-platform info bhc-platform-2026.1
+
+# Show all packages in a snapshot
+hx bhc-platform info bhc-platform-2026.1 --packages
+
+# Set snapshot for current project
+hx bhc-platform set bhc-platform-2026.1
+```
+
+### Lock Integration
+
+When a BHC Platform snapshot is configured, `hx lock` pins package versions from the snapshot into the resolver, providing reproducible builds without manually specifying constraints.
+
+See [hx bhc-platform](/docs/commands/bhc-platform) for the full command reference.
+
+## BHC Project Templates
+
+hx includes project templates optimized for BHC:
+
+```bash
+# Numeric computing (hmatrix, vector, massiv, statistics)
+hx new numeric my-science
+
+# Web server (Servant, Warp, WAI)
+hx new server my-api
+```
+
+You can also create standard templates with BHC:
+
+```bash
+hx init --backend bhc
+hx new webapp my-app --backend bhc
+hx new cli my-tool --backend bhc
+hx new library my-lib --backend bhc
+```
+
 ## Example: ML Project
 
 A project using BHC for ML workloads:
@@ -286,6 +351,9 @@ profile = "numeric"
 tensor_fusion = true
 emit_kernel_report = true
 
+[bhc-platform]
+snapshot = "bhc-platform-2026.1"
+
 [build]
 release = true
 ```
@@ -294,6 +362,12 @@ release = true
 # Build optimized ML binary
 hx build --release
 
+# Test
+hx test
+
+# Run
+hx run -- --input data.csv
+
 # Check optimization report
 cat .hx/bhc-reports/kernel-report.txt
 ```
@@ -301,5 +375,7 @@ cat .hx/bhc-reports/kernel-report.txt
 ## See Also
 
 - [hx build](/docs/commands/build) — Build command
+- [hx bhc-platform](/docs/commands/bhc-platform) — BHC Platform snapshots
+- [hx new](/docs/commands/new) — Project templates
 - [Cross-Compilation](/docs/features/cross-compilation) — Building for other platforms
 - [Toolchain Management](/docs/features/toolchain) — Managing compilers

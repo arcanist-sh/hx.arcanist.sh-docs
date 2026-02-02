@@ -137,6 +137,29 @@ hx new my-project --ghc 9.8.2
 hx new ml-project --backend bhc
 ```
 
+### Project Type Templates
+
+hx provides specialized project templates for common use cases:
+
+```bash
+# Web application (Servant + Warp)
+hx new webapp my-app
+
+# CLI tool (optparse-applicative)
+hx new cli my-tool
+
+# Library
+hx new library my-lib
+
+# Numeric computing (BHC, hmatrix, vector, massiv)
+hx new numeric my-science
+
+# Web server (BHC, Servant, Warp, WAI)
+hx new server my-api
+```
+
+The `numeric` and `server` templates automatically configure the BHC backend with optimized profiles. The `webapp`, `cli`, and `library` templates accept `--backend bhc` to use BHC instead of GHC.
+
 ### With Author Information
 
 ```bash
@@ -256,7 +279,47 @@ hx run
 hx test
 ```
 
+## Template Details
+
+### numeric
+
+Creates a BHC-optimized numeric computing project:
+
+```
+my-science/
+├── app/
+│   └── Main.hs            # Matrix/vector computation example
+├── src/
+│   └── Compute.hs         # Numeric operations module
+├── test/
+│   └── Main.hs            # Property tests with QuickCheck
+├── my-science.cabal        # hmatrix, vector, statistics, massiv
+├── hx.toml                 # backend = "bhc", profile = "numeric"
+└── README.md
+```
+
+### server
+
+Creates a BHC-optimized web server project:
+
+```
+my-api/
+├── app/
+│   └── Main.hs            # Server entry point
+├── src/
+│   ├── Api.hs             # Servant API definition
+│   ├── Server.hs          # Request handlers
+│   ├── Config.hs          # Environment-based config
+│   └── Types.hs           # Domain types
+├── test/
+│   └── Main.hs            # hspec-wai API tests
+├── my-api.cabal            # servant, warp, wai, aeson
+├── hx.toml                 # backend = "bhc", profile = "server"
+└── README.md
+```
+
 ## See Also
 
 - [hx init](/docs/commands/init) — Initialize hx in existing project
+- [hx bhc-platform](/docs/commands/bhc-platform) — Manage BHC Platform snapshots
 - [Quick Start](/docs/quickstart) — Getting started guide
