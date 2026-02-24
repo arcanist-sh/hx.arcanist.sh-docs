@@ -148,7 +148,7 @@
                 <div class="product-footer__col">
                     <h4>{{ col.title }}</h4>
                     {% for link in col.links %}
-                    <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.text }}</a>
+                    <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ link.text }}</a>
                     {% endfor %}
                 </div>
                 {% endfor %}
