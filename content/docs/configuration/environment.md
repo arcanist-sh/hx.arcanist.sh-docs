@@ -303,7 +303,7 @@ hx completions fish | source
 FROM haskell:9.8
 
 # Install hx
-RUN curl -fsSL https://get.raskell.io/hx | sh
+RUN curl -fsSL https://get.arcanist.sh/hx | sh
 
 # Configure for container environment
 ENV HX_LOG=info

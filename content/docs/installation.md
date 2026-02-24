@@ -8,7 +8,7 @@ weight = 1
 The fastest way to install hx is via the install script:
 
 ```bash
-curl -fsSL https://get.raskell.io/hx | sh
+curl -fsSL https://get.arcanist.sh/hx | sh
 ```
 
 This script will:
@@ -33,21 +33,21 @@ hx provides pre-built binaries for:
 
 ### From GitHub Releases
 
-Download the latest release for your platform from [GitHub Releases](https://github.com/raskell-io/hx/releases).
+Download the latest release for your platform from [GitHub Releases](https://github.com/arcanist-sh/hx/releases).
 
 ```bash
 # Linux x86_64
-curl -LO https://github.com/raskell-io/hx/releases/latest/download/hx-x86_64-unknown-linux-gnu.tar.gz
+curl -LO https://github.com/arcanist-sh/hx/releases/latest/download/hx-x86_64-unknown-linux-gnu.tar.gz
 tar xzf hx-x86_64-unknown-linux-gnu.tar.gz
 sudo mv hx /usr/local/bin/
 
 # macOS Apple Silicon
-curl -LO https://github.com/raskell-io/hx/releases/latest/download/hx-aarch64-apple-darwin.tar.gz
+curl -LO https://github.com/arcanist-sh/hx/releases/latest/download/hx-aarch64-apple-darwin.tar.gz
 tar xzf hx-aarch64-apple-darwin.tar.gz
 sudo mv hx /usr/local/bin/
 
 # Windows (PowerShell)
-Invoke-WebRequest -Uri https://github.com/raskell-io/hx/releases/latest/download/hx-x86_64-pc-windows-msvc.zip -OutFile hx.zip
+Invoke-WebRequest -Uri https://github.com/arcanist-sh/hx/releases/latest/download/hx-x86_64-pc-windows-msvc.zip -OutFile hx.zip
 Expand-Archive hx.zip -DestinationPath .
 Move-Item hx.exe $env:LOCALAPPDATA\Programs\hx\
 ```
@@ -57,7 +57,7 @@ Move-Item hx.exe $env:LOCALAPPDATA\Programs\hx\
 Building from source requires Rust 1.92.0 or later:
 
 ```bash
-git clone https://github.com/raskell-io/hx
+git clone https://github.com/arcanist-sh/hx
 cd hx
 cargo build --release
 sudo mv target/release/hx /usr/local/bin/
@@ -168,7 +168,7 @@ To update to the latest version:
 
 ```bash
 # Using the install script
-curl -fsSL https://get.raskell.io/hx | sh
+curl -fsSL https://get.arcanist.sh/hx | sh
 
 # Or if installed via cargo
 cargo install hx-cli --force

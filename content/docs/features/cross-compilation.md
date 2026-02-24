@@ -199,7 +199,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup hx
-        run: curl -fsSL https://get.raskell.io/hx | sh
+        run: curl -fsSL https://get.arcanist.sh/hx | sh
 
       - name: Install cross-compiler
         run: hx toolchain install --ghc 9.8.2 --target ${{ matrix.target }}

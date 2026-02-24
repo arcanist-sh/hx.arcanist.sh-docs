@@ -342,5 +342,5 @@ Key Rust dependencies:
 
 ## See Also
 
-- [GitHub Repository](https://github.com/raskell-io/hx)
-- [Contributing Guide](https://github.com/raskell-io/hx/blob/main/CONTRIBUTING.md)
+- [GitHub Repository](https://github.com/arcanist-sh/hx)
+- [Contributing Guide](https://github.com/arcanist-sh/hx/blob/main/CONTRIBUTING.md)

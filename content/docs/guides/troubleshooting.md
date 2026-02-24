@@ -48,7 +48,7 @@ error: Permission denied installing to /usr/local/bin
 **Solution**: Use user-local install
 
 ```bash
-curl -fsSL https://get.raskell.io/hx | sh -s -- --prefix ~/.local
+curl -fsSL https://get.arcanist.sh/hx | sh -s -- --prefix ~/.local
 ```
 
 ## Toolchain Issues
@@ -397,7 +397,7 @@ Include in bug reports:
 3. Relevant configuration files
 4. Full error message with `--verbose`
 
-File issues at: https://github.com/raskell-io/hx/issues
+File issues at: https://github.com/arcanist-sh/hx/issues
 
 ## See Also
 

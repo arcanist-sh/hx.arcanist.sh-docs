@@ -439,7 +439,7 @@ We welcome benchmark contributions:
 2. **Suggest new scenarios** — What operations should we benchmark?
 3. **Report regressions** — If you notice performance degradation, file an issue
 
-Submit results: [GitHub Issues](https://github.com/raskell-io/hx/issues)
+Submit results: [GitHub Issues](https://github.com/arcanist-sh/hx/issues)
 
 ---
 
