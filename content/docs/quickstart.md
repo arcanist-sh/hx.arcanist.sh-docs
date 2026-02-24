@@ -8,7 +8,7 @@ This guide will walk you through creating and building your first Haskell projec
 ## Prerequisites
 
 Before starting, make sure you have:
-1. [hx installed](/docs/installation)
+1. [hx installed](@/docs/installation.md)
 2. A Haskell toolchain (GHC + Cabal)
 
 If you don't have a Haskell toolchain, install it with:
@@ -75,7 +75,7 @@ hx new numeric my-science
 hx new server my-api
 ```
 
-The `numeric` and `server` templates use the BHC backend with optimized profiles. See [Compiler Backends](/docs/features/compiler-backends) for more on BHC.
+The `numeric` and `server` templates use the BHC backend with optimized profiles. See [Compiler Backends](@/docs/features/compiler-backends.md) for more on BHC.
 
 ## Build Your Project
 
@@ -233,7 +233,7 @@ This checks for:
 
 ## What's Next?
 
-- Learn about [all available commands](/docs/commands)
-- Configure your project with [hx.toml](/docs/configuration/hx-toml)
-- Explore [advanced features](/docs/features)
-- Read the [workflow guides](/docs/guides)
+- Learn about [all available commands](@/docs/commands/_index.md)
+- Configure your project with [hx.toml](@/docs/configuration/hx-toml.md)
+- Explore [advanced features](@/docs/features/_index.md)
+- Read the [workflow guides](@/docs/guides/_index.md)

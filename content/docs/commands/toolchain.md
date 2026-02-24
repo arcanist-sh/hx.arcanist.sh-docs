@@ -271,5 +271,5 @@ hx automatically uses the correct version for each project.
 
 ## See Also
 
-- [Toolchain Management](/docs/features/toolchain) — Feature guide
-- [hx doctor](/docs/commands/doctor) — Check toolchain health
+- [Toolchain Management](@/docs/features/toolchain.md) — Feature guide
+- [hx doctor](@/docs/commands/doctor.md) — Check toolchain health

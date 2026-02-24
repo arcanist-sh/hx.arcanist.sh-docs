@@ -131,7 +131,7 @@ split-sections = true        # Enable split sections (smaller binaries)
 backend = "ghc"              # Default compiler backend
 ```
 
-See [Configuration Reference](/docs/configuration/hx-toml) for all options.
+See [Configuration Reference](@/docs/configuration/hx-toml.md) for all options.
 
 ## Build Artifacts
 
@@ -162,7 +162,7 @@ hx clean && hx build
 
 ## See Also
 
-- [hx run](/docs/commands/run) — Build and run the executable
-- [hx check](/docs/commands/check) — Type check without full compilation
-- [hx clean](/docs/commands/clean) — Remove build artifacts
-- [Compiler Backends](/docs/features/compiler-backends) — Using GHC vs BHC
+- [hx run](@/docs/commands/run.md) — Build and run the executable
+- [hx check](@/docs/commands/check.md) — Type check without full compilation
+- [hx clean](@/docs/commands/clean.md) — Remove build artifacts
+- [Compiler Backends](@/docs/features/compiler-backends.md) — Using GHC vs BHC

@@ -248,6 +248,6 @@ In GitHub Actions:
 
 ## See Also
 
-- [hx build](/docs/commands/build) — Build without testing
-- [hx watch test](/docs/commands/watch) — Auto-run tests on changes
-- [hx bench](/docs/commands/bench) — Run benchmarks
+- [hx build](@/docs/commands/build.md) — Build without testing
+- [hx watch test](@/docs/commands/watch.md) — Auto-run tests on changes
+- [hx bench](@/docs/commands/bench.md) — Run benchmarks

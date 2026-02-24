@@ -170,5 +170,5 @@ Fail on outdated:
 
 ## See Also
 
-- [hx update](/docs/commands/update) — Update dependencies
-- [hx lock](/docs/commands/lock) — Generate lockfile
+- [hx update](@/docs/commands/update.md) — Update dependencies
+- [hx lock](@/docs/commands/lock.md) — Generate lockfile

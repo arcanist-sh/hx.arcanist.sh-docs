@@ -190,5 +190,5 @@ chmod +x .git/hooks/pre-commit
 
 ## See Also
 
-- [hx lint](/docs/commands/lint) — Run linter
-- [Configuration Reference](/docs/configuration/hx-toml)
+- [hx lint](@/docs/commands/lint.md) — Run linter
+- [Configuration Reference](@/docs/configuration/hx-toml.md)

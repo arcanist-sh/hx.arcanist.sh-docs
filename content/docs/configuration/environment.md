@@ -313,5 +313,5 @@ ENV CI=true
 
 ## See Also
 
-- [Installation](/docs/installation) — Setup guide
-- [hx.toml Reference](/docs/configuration/hx-toml) — Configuration file
+- [Installation](@/docs/installation.md) — Setup guide
+- [hx.toml Reference](@/docs/configuration/hx-toml.md) — Configuration file

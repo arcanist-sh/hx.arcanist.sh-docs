@@ -174,7 +174,7 @@ extra_deps = { my-custom-lib = "1.0.0" }
 
 > **Note:** BHC Platform snapshots are only applied when `[compiler].backend = "bhc"`. For GHC projects, use Stackage snapshots via `[toolchain].resolver`.
 
-See [hx bhc-platform](/docs/commands/bhc-platform) for CLI commands.
+See [hx bhc-platform](@/docs/commands/bhc-platform.md) for CLI commands.
 
 ## [build]
 

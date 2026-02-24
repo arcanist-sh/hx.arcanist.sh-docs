@@ -149,7 +149,7 @@ extra_deps = {}
 
 ## See Also
 
-- [Compiler Backends](/docs/features/compiler-backends) — GHC and BHC support
-- [hx.toml Reference](/docs/configuration/hx-toml) — `[bhc-platform]` configuration
-- [hx lock](/docs/commands/lock) — Generate lockfile with snapshot pinning
-- [hx new](/docs/commands/new) — Create projects with BHC templates
+- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC and BHC support
+- [hx.toml Reference](@/docs/configuration/hx-toml.md) — `[bhc-platform]` configuration
+- [hx lock](@/docs/commands/lock.md) — Generate lockfile with snapshot pinning
+- [hx new](@/docs/commands/new.md) — Create projects with BHC templates

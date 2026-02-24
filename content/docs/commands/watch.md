@@ -231,6 +231,6 @@ hx watch build --poll
 
 ## See Also
 
-- [hx build](/docs/commands/build) — Build command
-- [hx test](/docs/commands/test) — Test command
-- [hx check](/docs/commands/check) — Type check command
+- [hx build](@/docs/commands/build.md) — Build command
+- [hx test](@/docs/commands/test.md) — Test command
+- [hx check](@/docs/commands/check.md) — Type check command

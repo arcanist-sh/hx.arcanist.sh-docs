@@ -234,6 +234,6 @@ hx build --verbose
 
 ## See Also
 
-- [hx init](/docs/commands/init) — Initialize hx
-- [Configuration](/docs/configuration/hx-toml) — hx.toml reference
-- [Lockfiles](/docs/features/lockfiles) — Reproducible builds
+- [hx init](@/docs/commands/init.md) — Initialize hx
+- [Configuration](@/docs/configuration/hx-toml.md) — hx.toml reference
+- [Lockfiles](@/docs/features/lockfiles.md) — Reproducible builds

@@ -131,6 +131,6 @@ hx build
 
 ## See Also
 
-- [hx add](/docs/commands/add) — Add dependencies
-- [hx update](/docs/commands/update) — Update dependencies
-- [hx outdated](/docs/commands/outdated) — Check for outdated dependencies
+- [hx add](@/docs/commands/add.md) — Add dependencies
+- [hx update](@/docs/commands/update.md) — Update dependencies
+- [hx outdated](@/docs/commands/outdated.md) — Check for outdated dependencies

@@ -169,6 +169,6 @@ The exit code from `hx run` is the exit code of your program, unless there's a b
 
 ## See Also
 
-- [hx build](/docs/commands/build) — Compile without running
-- [hx test](/docs/commands/test) — Run test suite
-- [hx watch run](/docs/commands/watch) — Auto-run on file changes
+- [hx build](@/docs/commands/build.md) — Compile without running
+- [hx test](@/docs/commands/test.md) — Run test suite
+- [hx watch run](@/docs/commands/watch.md) — Auto-run on file changes

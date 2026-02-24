@@ -383,6 +383,6 @@ Split workflow:
 
 ## See Also
 
-- [hx watch](/docs/commands/watch) — Watch mode
-- [hx repl](/docs/commands/repl) — Interactive development
-- [Formatting & Linting](/docs/features/formatting-linting) — Code quality
+- [hx watch](@/docs/commands/watch.md) — Watch mode
+- [hx repl](@/docs/commands/repl.md) — Interactive development
+- [Formatting & Linting](@/docs/features/formatting-linting.md) — Code quality

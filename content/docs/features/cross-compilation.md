@@ -281,6 +281,6 @@ ghc-options = ["-static"]
 
 ## See Also
 
-- [hx build](/docs/commands/build) — Build command
-- [Compiler Backends](/docs/features/compiler-backends) — GHC and BHC
-- [Toolchain Management](/docs/features/toolchain) — Installing compilers
+- [hx build](@/docs/commands/build.md) — Build command
+- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC and BHC
+- [Toolchain Management](@/docs/features/toolchain.md) — Installing compilers

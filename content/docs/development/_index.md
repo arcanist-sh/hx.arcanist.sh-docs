@@ -40,5 +40,5 @@ hx maintains high quality through:
 
 ## Sections
 
-- **[Benchmarks](/docs/development/benchmarks)** — Performance measurements and methodology
-- **[Testing](/docs/development/testing)** — Test suite overview and how to contribute tests
+- **[Benchmarks](@/docs/development/benchmarks.md)** — Performance measurements and methodology
+- **[Testing](@/docs/development/testing.md)** — Test suite overview and how to contribute tests

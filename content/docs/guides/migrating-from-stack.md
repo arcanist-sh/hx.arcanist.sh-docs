@@ -297,6 +297,6 @@ After migrating to hx:
 
 ## See Also
 
-- [hx init](/docs/commands/init) — Initialize hx
-- [hx lock](/docs/commands/lock) — Generate lockfile
-- [Configuration](/docs/configuration/hx-toml) — hx.toml reference
+- [hx init](@/docs/commands/init.md) — Initialize hx
+- [hx lock](@/docs/commands/lock.md) — Generate lockfile
+- [Configuration](@/docs/configuration/hx-toml.md) — hx.toml reference

@@ -157,6 +157,6 @@ hx lock
 
 ## See Also
 
-- [hx new](/docs/commands/new) — Create new project
-- [Compiler Backends](/docs/features/compiler-backends) — GHC vs BHC
-- [Configuration Reference](/docs/configuration/hx-toml)
+- [hx new](@/docs/commands/new.md) — Create new project
+- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC vs BHC
+- [Configuration Reference](@/docs/configuration/hx-toml.md)

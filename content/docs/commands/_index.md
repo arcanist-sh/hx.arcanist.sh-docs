@@ -14,52 +14,52 @@ Commands for building, running, and testing your project.
 
 | Command | Description |
 |---------|-------------|
-| [build](/docs/commands/build) | Compile the project |
-| [run](/docs/commands/run) | Build and run the executable |
-| [test](/docs/commands/test) | Run the test suite |
-| [bench](/docs/commands/bench) | Run benchmarks |
-| [check](/docs/commands/check) | Type check without compiling |
-| [repl](/docs/commands/repl) | Start interactive GHCi session |
-| [doc](/docs/commands/doc) | Generate documentation |
+| [build](@/docs/commands/build.md) | Compile the project |
+| [run](@/docs/commands/run.md) | Build and run the executable |
+| [test](@/docs/commands/test.md) | Run the test suite |
+| [bench](@/docs/commands/bench.md) | Run benchmarks |
+| [check](@/docs/commands/check.md) | Type check without compiling |
+| [repl](@/docs/commands/repl.md) | Start interactive GHCi session |
+| [doc](@/docs/commands/doc.md) | Generate documentation |
 
 ### Project Management
 Commands for creating and managing projects.
 
 | Command | Description |
 |---------|-------------|
-| [new](/docs/commands/new) | Create a new project |
-| [init](/docs/commands/init) | Initialize hx in existing project |
-| [add](/docs/commands/add) | Add dependencies |
-| [remove](/docs/commands/remove) | Remove dependencies |
-| [update](/docs/commands/update) | Update dependencies |
+| [new](@/docs/commands/new.md) | Create a new project |
+| [init](@/docs/commands/init.md) | Initialize hx in existing project |
+| [add](@/docs/commands/add.md) | Add dependencies |
+| [remove](@/docs/commands/remove.md) | Remove dependencies |
+| [update](@/docs/commands/update.md) | Update dependencies |
 
 ### Dependency Management
 Commands for managing dependencies and lockfiles.
 
 | Command | Description |
 |---------|-------------|
-| [lock](/docs/commands/lock) | Generate/update lockfile |
-| [sync](/docs/commands/sync) | Sync dependencies from lockfile |
-| [outdated](/docs/commands/outdated) | Check for outdated dependencies |
+| [lock](@/docs/commands/lock.md) | Generate/update lockfile |
+| [sync](@/docs/commands/sync.md) | Sync dependencies from lockfile |
+| [outdated](@/docs/commands/outdated.md) | Check for outdated dependencies |
 
 ### Toolchain Management
 Commands for managing the Haskell toolchain.
 
 | Command | Description |
 |---------|-------------|
-| [toolchain](/docs/commands/toolchain) | Manage GHC, Cabal, and other tools |
-| [bhc-platform](/docs/commands/bhc-platform) | Manage BHC Platform curated snapshots |
+| [toolchain](@/docs/commands/toolchain.md) | Manage GHC, Cabal, and other tools |
+| [bhc-platform](@/docs/commands/bhc-platform.md) | Manage BHC Platform curated snapshots |
 
 ### Utilities
 Additional utility commands.
 
 | Command | Description |
 |---------|-------------|
-| [clean](/docs/commands/clean) | Remove build artifacts |
-| [fmt](/docs/commands/fmt) | Format Haskell code |
-| [lint](/docs/commands/lint) | Run linter |
-| [watch](/docs/commands/watch) | Watch mode for auto-rebuild |
-| [doctor](/docs/commands/doctor) | Diagnose environment issues |
+| [clean](@/docs/commands/clean.md) | Remove build artifacts |
+| [fmt](@/docs/commands/fmt.md) | Format Haskell code |
+| [lint](@/docs/commands/lint.md) | Run linter |
+| [watch](@/docs/commands/watch.md) | Watch mode for auto-rebuild |
+| [doctor](@/docs/commands/doctor.md) | Diagnose environment issues |
 
 ## Global Options
 

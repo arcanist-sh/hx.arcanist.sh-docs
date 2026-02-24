@@ -401,6 +401,6 @@ File issues at: https://github.com/arcanist-sh/hx/issues
 
 ## See Also
 
-- [hx doctor](/docs/commands/doctor) — Diagnostics
-- [Installation](/docs/installation) — Setup guide
-- [Configuration](/docs/configuration/hx-toml) — Config reference
+- [hx doctor](@/docs/commands/doctor.md) — Diagnostics
+- [Installation](@/docs/installation.md) — Setup guide
+- [Configuration](@/docs/configuration/hx-toml.md) — Config reference

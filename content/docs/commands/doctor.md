@@ -217,6 +217,6 @@ fix: Run `hx toolchain install --bhc 0.2.0`
 
 ## See Also
 
-- [hx toolchain](/docs/commands/toolchain) — Manage toolchains
-- [Installation](/docs/installation) — Setup guide
-- [Troubleshooting](/docs/guides/troubleshooting) — Common issues
+- [hx toolchain](@/docs/commands/toolchain.md) — Manage toolchains
+- [Installation](@/docs/installation.md) — Setup guide
+- [Troubleshooting](@/docs/guides/troubleshooting.md) — Common issues

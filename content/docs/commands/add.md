@@ -190,6 +190,6 @@ hx lock
 
 ## See Also
 
-- [hx remove](/docs/commands/remove) — Remove dependencies
-- [hx update](/docs/commands/update) — Update dependencies
-- [hx lock](/docs/commands/lock) — Update lockfile
+- [hx remove](@/docs/commands/remove.md) — Remove dependencies
+- [hx update](@/docs/commands/update.md) — Update dependencies
+- [hx lock](@/docs/commands/lock.md) — Update lockfile

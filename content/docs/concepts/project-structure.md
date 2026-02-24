@@ -367,5 +367,5 @@ Minimize files in project root. Use subdirectories for organization.
 
 ## See Also
 
-- [hx new](/docs/commands/new) — Create new project
-- [hx init](/docs/commands/init) — Initialize existing project
+- [hx new](@/docs/commands/new.md) — Create new project
+- [hx init](@/docs/commands/init.md) — Initialize existing project

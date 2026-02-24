@@ -18,32 +18,32 @@ hx is a modern toolchain CLI for Haskell that makes working with Haskell project
 
 ## Documentation Sections
 
-### [Getting Started](/docs/installation)
+### [Getting Started](@/docs/installation.md)
 Install hx and create your first project.
 
-### [Commands Reference](/docs/commands)
+### [Commands Reference](@/docs/commands/_index.md)
 Complete reference for all hx CLI commands.
 
-### [Configuration Reference](/docs/configuration)
+### [Configuration Reference](@/docs/configuration/_index.md)
 Full documentation for `hx.toml` configuration files.
 
-### [Features](/docs/features)
+### [Features](@/docs/features/_index.md)
 In-depth coverage of hx features like compiler backends, cross-compilation, and toolchain management.
 
-### [Concepts](/docs/concepts)
+### [Concepts](@/docs/concepts/_index.md)
 Understanding how hx works: project structure, dependency resolution, and build system.
 
-### [Guides](/docs/guides)
+### [Guides](@/docs/guides/_index.md)
 Step-by-step tutorials and workflow guides.
 
-### [Development](/docs/development)
+### [Development](@/docs/development/_index.md)
 Benchmarks, testing, and contributing to hx.
 
 ## Quick Links
 
-- [Installation](/docs/installation)
-- [Quick Start](/docs/quickstart)
-- [CLI Reference](/docs/commands)
-- [hx.toml Reference](/docs/configuration/hx-toml)
-- [Benchmarks](/docs/development/benchmarks)
-- [Troubleshooting](/docs/guides/troubleshooting)
+- [Installation](@/docs/installation.md)
+- [Quick Start](@/docs/quickstart.md)
+- [CLI Reference](@/docs/commands/_index.md)
+- [hx.toml Reference](@/docs/configuration/hx-toml.md)
+- [Benchmarks](@/docs/development/benchmarks.md)
+- [Troubleshooting](@/docs/guides/troubleshooting.md)

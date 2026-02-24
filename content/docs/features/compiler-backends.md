@@ -311,7 +311,7 @@ hx bhc-platform set bhc-platform-2026.1
 
 When a BHC Platform snapshot is configured, `hx lock` pins package versions from the snapshot into the resolver, providing reproducible builds without manually specifying constraints.
 
-See [hx bhc-platform](/docs/commands/bhc-platform) for the full command reference.
+See [hx bhc-platform](@/docs/commands/bhc-platform.md) for the full command reference.
 
 ## BHC Project Templates
 
@@ -374,8 +374,8 @@ cat .hx/bhc-reports/kernel-report.txt
 
 ## See Also
 
-- [hx build](/docs/commands/build) — Build command
-- [hx bhc-platform](/docs/commands/bhc-platform) — BHC Platform snapshots
-- [hx new](/docs/commands/new) — Project templates
-- [Cross-Compilation](/docs/features/cross-compilation) — Building for other platforms
-- [Toolchain Management](/docs/features/toolchain) — Managing compilers
+- [hx build](@/docs/commands/build.md) — Build command
+- [hx bhc-platform](@/docs/commands/bhc-platform.md) — BHC Platform snapshots
+- [hx new](@/docs/commands/new.md) — Project templates
+- [Cross-Compilation](@/docs/features/cross-compilation.md) — Building for other platforms
+- [Toolchain Management](@/docs/features/toolchain.md) — Managing compilers

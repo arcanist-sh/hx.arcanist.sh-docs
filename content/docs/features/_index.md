@@ -37,10 +37,10 @@ hx provides a modern, unified interface for Haskell development with these key f
 
 ## Feature Sections
 
-- **[Compiler Backends](/docs/features/compiler-backends)** — GHC and BHC support
-- **[BHC Platform](/docs/features/bhc-platform)** — Curated package snapshots for BHC
-- **[Cross-Compilation](/docs/features/cross-compilation)** — Building for other platforms
-- **[Toolchain Management](/docs/features/toolchain)** — Managing GHC, Cabal, BHC
-- **[Lockfiles](/docs/features/lockfiles)** — Reproducible builds
-- **[Watch Mode](/docs/features/watch-mode)** — Auto-rebuild on changes
-- **[Formatting & Linting](/docs/features/formatting-linting)** — Code quality tools
+- **[Compiler Backends](@/docs/features/compiler-backends.md)** — GHC and BHC support
+- **[BHC Platform](@/docs/features/bhc-platform.md)** — Curated package snapshots for BHC
+- **[Cross-Compilation](@/docs/features/cross-compilation.md)** — Building for other platforms
+- **[Toolchain Management](@/docs/features/toolchain.md)** — Managing GHC, Cabal, BHC
+- **[Lockfiles](@/docs/features/lockfiles.md)** — Reproducible builds
+- **[Watch Mode](@/docs/features/watch-mode.md)** — Auto-rebuild on changes
+- **[Formatting & Linting](@/docs/features/formatting-linting.md)** — Code quality tools

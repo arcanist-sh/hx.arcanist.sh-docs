@@ -380,5 +380,5 @@ services:
 
 ## See Also
 
-- [hx lock --frozen](/docs/commands/lock) — Frozen builds
-- [hx test --fail-fast](/docs/commands/test) — Test options
+- [hx lock --frozen](@/docs/commands/lock.md) — Frozen builds
+- [hx test --fail-fast](@/docs/commands/test.md) — Test options

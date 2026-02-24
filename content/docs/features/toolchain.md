@@ -305,6 +305,6 @@ hx toolchain remove --ghc 9.4.8
 
 ## See Also
 
-- [hx toolchain](/docs/commands/toolchain) — Command reference
-- [hx doctor](/docs/commands/doctor) — Diagnose issues
-- [Installation](/docs/installation) — Initial setup
+- [hx toolchain](@/docs/commands/toolchain.md) — Command reference
+- [hx doctor](@/docs/commands/doctor.md) — Diagnose issues
+- [Installation](@/docs/installation.md) — Initial setup

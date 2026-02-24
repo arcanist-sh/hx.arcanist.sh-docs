@@ -50,7 +50,7 @@ hx emphasizes reproducibility:
 
 ## Sections
 
-- **[Project Structure](/docs/concepts/project-structure)** — How hx projects are organized
-- **[Dependency Resolution](/docs/concepts/dependency-resolution)** — How dependencies work
-- **[Build System](/docs/concepts/build-system)** — How builds are executed
-- **[Architecture](/docs/concepts/architecture)** — How hx is built internally
+- **[Project Structure](@/docs/concepts/project-structure.md)** — How hx projects are organized
+- **[Dependency Resolution](@/docs/concepts/dependency-resolution.md)** — How dependencies work
+- **[Build System](@/docs/concepts/build-system.md)** — How builds are executed
+- **[Architecture](@/docs/concepts/architecture.md)** — How hx is built internally

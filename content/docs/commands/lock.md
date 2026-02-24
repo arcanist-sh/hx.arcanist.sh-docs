@@ -171,6 +171,6 @@ hx lock
 
 ## See Also
 
-- [hx sync](/docs/commands/sync) — Install from lockfile
-- [hx update](/docs/commands/update) — Update dependencies
-- [hx add](/docs/commands/add) — Add dependencies
+- [hx sync](@/docs/commands/sync.md) — Install from lockfile
+- [hx update](@/docs/commands/update.md) — Update dependencies
+- [hx add](@/docs/commands/add.md) — Add dependencies

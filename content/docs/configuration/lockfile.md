@@ -276,6 +276,6 @@ When reviewing PRs, check `hx.lock` diffs for unexpected changes.
 
 ## See Also
 
-- [hx lock](/docs/commands/lock) — Generate lockfile
-- [hx sync](/docs/commands/sync) — Install from lockfile
-- [hx outdated](/docs/commands/outdated) — Check for updates
+- [hx lock](@/docs/commands/lock.md) — Generate lockfile
+- [hx sync](@/docs/commands/sync.md) — Install from lockfile
+- [hx outdated](@/docs/commands/outdated.md) — Check for updates

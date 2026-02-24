@@ -336,7 +336,7 @@ fix: Run `hx lock --force` to regenerate
 
 ## See Also
 
-- [hx lock](/docs/commands/lock) — Generate lockfile
-- [hx sync](/docs/commands/sync) — Install from lockfile
-- [hx outdated](/docs/commands/outdated) — Check for updates
-- [Lockfile Reference](/docs/configuration/lockfile) — File format
+- [hx lock](@/docs/commands/lock.md) — Generate lockfile
+- [hx sync](@/docs/commands/sync.md) — Install from lockfile
+- [hx outdated](@/docs/commands/outdated.md) — Check for updates
+- [Lockfile Reference](@/docs/configuration/lockfile.md) — File format

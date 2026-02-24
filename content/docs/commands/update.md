@@ -191,6 +191,6 @@ hx sync
 
 ## See Also
 
-- [hx add](/docs/commands/add) — Add dependencies
-- [hx outdated](/docs/commands/outdated) — Check for outdated deps
-- [hx lock](/docs/commands/lock) — Generate lockfile
+- [hx add](@/docs/commands/add.md) — Add dependencies
+- [hx outdated](@/docs/commands/outdated.md) — Check for outdated deps
+- [hx lock](@/docs/commands/lock.md) — Generate lockfile

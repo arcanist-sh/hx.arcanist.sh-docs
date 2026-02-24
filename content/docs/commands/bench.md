@@ -227,5 +227,5 @@ hx bench --release -- --quick --no-gc
 
 ## See Also
 
-- [hx test](/docs/commands/test) — Run tests
-- [hx build --release](/docs/commands/build) — Release builds
+- [hx test](@/docs/commands/test.md) — Run tests
+- [hx build --release](@/docs/commands/build.md) — Release builds

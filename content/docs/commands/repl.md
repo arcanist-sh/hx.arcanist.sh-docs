@@ -184,5 +184,5 @@ ghci> :list
 
 ## See Also
 
-- [hx build](/docs/commands/build) — Compile the project
-- [hx check](/docs/commands/check) — Type check without compiling
+- [hx build](@/docs/commands/build.md) — Compile the project
+- [hx check](@/docs/commands/check.md) — Type check without compiling

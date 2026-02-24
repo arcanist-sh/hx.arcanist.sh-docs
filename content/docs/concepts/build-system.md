@@ -216,7 +216,7 @@ hx build --backend bhc
 
 Invokes `bhc build` with translated options.
 
-See [Compiler Backends](/docs/features/compiler-backends) for details.
+See [Compiler Backends](@/docs/features/compiler-backends.md) for details.
 
 ## Build Modes
 
@@ -279,7 +279,7 @@ Build for different platforms:
 hx build --target aarch64-linux-gnu
 ```
 
-See [Cross-Compilation](/docs/features/cross-compilation) for details.
+See [Cross-Compilation](@/docs/features/cross-compilation.md) for details.
 
 ## CI Builds
 
@@ -341,6 +341,6 @@ hx build --ghc-options="+RTS -M4G -RTS"
 
 ## See Also
 
-- [hx build](/docs/commands/build) — Build command
-- [hx clean](/docs/commands/clean) — Clean artifacts
-- [hx check](/docs/commands/check) — Type check
+- [hx build](@/docs/commands/build.md) — Build command
+- [hx clean](@/docs/commands/clean.md) — Clean artifacts
+- [hx check](@/docs/commands/check.md) — Type check

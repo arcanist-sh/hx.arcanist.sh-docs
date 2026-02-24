@@ -108,5 +108,5 @@ werror = false
 
 ## See Also
 
-- [hx build](/docs/commands/build) — Full compilation
-- [hx watch](/docs/commands/watch) — Auto-check on file changes
+- [hx build](@/docs/commands/build.md) — Full compilation
+- [hx watch](@/docs/commands/watch.md) — Auto-check on file changes

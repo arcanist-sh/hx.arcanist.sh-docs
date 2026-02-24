@@ -130,7 +130,7 @@ hx new server my-api
 | `hx bhc-platform info <platform> --packages` | Show all packages |
 | `hx bhc-platform set <platform>` | Set snapshot in hx.toml |
 
-See [hx bhc-platform](/docs/commands/bhc-platform) for the full command reference.
+See [hx bhc-platform](@/docs/commands/bhc-platform.md) for the full command reference.
 
 ## Troubleshooting
 
@@ -152,11 +152,11 @@ Install BHC with `hx toolchain install --bhc latest`.
 
 ### Using with GHC backend
 
-BHC Platform snapshots are only applied when `[compiler].backend = "bhc"`. If you're using GHC, configure a [Stackage resolver](/docs/features/lockfiles) instead.
+BHC Platform snapshots are only applied when `[compiler].backend = "bhc"`. If you're using GHC, configure a [Stackage resolver](@/docs/features/lockfiles.md) instead.
 
 ## See Also
 
-- [Compiler Backends](/docs/features/compiler-backends) — GHC and BHC overview
-- [hx bhc-platform](/docs/commands/bhc-platform) — Command reference
-- [hx.toml Reference](/docs/configuration/hx-toml) — Configuration details
-- [hx new](/docs/commands/new) — BHC project templates
+- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC and BHC overview
+- [hx bhc-platform](@/docs/commands/bhc-platform.md) — Command reference
+- [hx.toml Reference](@/docs/configuration/hx-toml.md) — Configuration details
+- [hx new](@/docs/commands/new.md) — BHC project templates

@@ -352,6 +352,6 @@ Keep CHANGELOG.md updated with every release.
 
 ## See Also
 
-- [hx new](/docs/commands/new) — Create projects
-- [hx doc](/docs/commands/doc) — Generate documentation
+- [hx new](@/docs/commands/new.md) — Create projects
+- [hx doc](@/docs/commands/doc.md) — Generate documentation
 - [Hackage](https://hackage.haskell.org/) — Package repository

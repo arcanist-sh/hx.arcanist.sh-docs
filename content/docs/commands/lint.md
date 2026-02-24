@@ -233,5 +233,5 @@ let g:ale_linters = {'haskell': ['hlint']}
 
 ## See Also
 
-- [hx fmt](/docs/commands/fmt) — Format code
+- [hx fmt](@/docs/commands/fmt.md) — Format code
 - [HLint documentation](https://github.com/ndmitchell/hlint)

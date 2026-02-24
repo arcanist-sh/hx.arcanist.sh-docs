@@ -46,6 +46,6 @@ ignore = []
 
 ## Sections
 
-- **[hx.toml Reference](/docs/configuration/hx-toml)** — Complete configuration file reference
-- **[Lockfile](/docs/configuration/lockfile)** — Understanding hx.lock
-- **[Environment Variables](/docs/configuration/environment)** — Environment variable configuration
+- **[hx.toml Reference](@/docs/configuration/hx-toml.md)** — Complete configuration file reference
+- **[Lockfile](@/docs/configuration/lockfile.md)** — Understanding hx.lock
+- **[Environment Variables](@/docs/configuration/environment.md)** — Environment variable configuration

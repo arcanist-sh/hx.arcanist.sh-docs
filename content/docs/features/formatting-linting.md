@@ -379,7 +379,7 @@ Add project-specific rules:
 
 ## See Also
 
-- [hx fmt](/docs/commands/fmt) — Format command
-- [hx lint](/docs/commands/lint) — Lint command
+- [hx fmt](@/docs/commands/fmt.md) — Format command
+- [hx lint](@/docs/commands/lint.md) — Lint command
 - [Ormolu](https://github.com/tweag/ormolu) — Formatter docs
 - [HLint](https://github.com/ndmitchell/hlint) — Linter docs

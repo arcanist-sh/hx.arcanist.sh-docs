@@ -220,5 +220,5 @@ Generate docs in CI:
 
 ## See Also
 
-- [hx build](/docs/commands/build) — Build the project
+- [hx build](@/docs/commands/build.md) — Build the project
 - [Haddock documentation](https://haskell-haddock.readthedocs.io/)

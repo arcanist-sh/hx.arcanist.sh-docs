@@ -137,5 +137,5 @@ Packages are cached in:
 
 ## See Also
 
-- [hx lock](/docs/commands/lock) — Generate lockfile
-- [hx update](/docs/commands/update) — Update dependencies
+- [hx lock](@/docs/commands/lock.md) — Generate lockfile
+- [hx update](@/docs/commands/update.md) — Update dependencies

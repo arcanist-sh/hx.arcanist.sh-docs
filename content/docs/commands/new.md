@@ -320,6 +320,6 @@ my-api/
 
 ## See Also
 
-- [hx init](/docs/commands/init) — Initialize hx in existing project
-- [hx bhc-platform](/docs/commands/bhc-platform) — Manage BHC Platform snapshots
-- [Quick Start](/docs/quickstart) — Getting started guide
+- [hx init](@/docs/commands/init.md) — Initialize hx in existing project
+- [hx bhc-platform](@/docs/commands/bhc-platform.md) — Manage BHC Platform snapshots
+- [Quick Start](@/docs/quickstart.md) — Getting started guide

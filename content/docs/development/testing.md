@@ -193,7 +193,7 @@ Performance benchmarks using the Criterion framework.
 - Shell completions (bash, zsh, fish)
 - Lockfile operations
 
-See the [Benchmarks](/docs/development/benchmarks) page for detailed results.
+See the [Benchmarks](@/docs/development/benchmarks.md) page for detailed results.
 
 ---
 
@@ -466,5 +466,5 @@ Submit test improvements: [GitHub PRs](https://github.com/arcanist-sh/hx/pulls)
 
 ## Related Pages
 
-- [Benchmarks](/docs/development/benchmarks) — Performance measurements
+- [Benchmarks](@/docs/development/benchmarks.md) — Performance measurements
 - [Contributing](https://github.com/arcanist-sh/hx/blob/main/CONTRIBUTING.md) — How to contribute

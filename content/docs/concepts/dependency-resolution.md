@@ -358,7 +358,7 @@ Package B requires text >=2.0
 
 ## See Also
 
-- [hx add](/docs/commands/add) — Add dependencies
-- [hx lock](/docs/commands/lock) — Generate lockfile
-- [hx sync](/docs/commands/sync) — Install dependencies
-- [Lockfiles](/docs/features/lockfiles) — Feature guide
+- [hx add](@/docs/commands/add.md) — Add dependencies
+- [hx lock](@/docs/commands/lock.md) — Generate lockfile
+- [hx sync](@/docs/commands/sync.md) — Install dependencies
+- [Lockfiles](@/docs/features/lockfiles.md) — Feature guide

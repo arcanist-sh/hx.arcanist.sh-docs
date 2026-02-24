@@ -10,7 +10,7 @@
 {% macro nav_links(nav, current_path="") %}
 {% if nav %}
 {% for link in nav %}
-<a href="{{ link.url | safe }}" class="header__link {% if current_path == link.url %}active{% endif %}">
+<a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__link {% if current_path == link.url %}active{% endif %}">
     {{ link.name }}
 </a>
 {% endfor %}
@@ -47,7 +47,7 @@
             {% if loop.last %}
             <span aria-current="page">{{ item.name }}</span>
             {% else %}
-            <a href="{{ item.url | safe }}">{{ item.name }}</a>
+            <a href="{% if item.url is starting_with(pat='http') %}{{ item.url | safe }}{% else %}{{ get_url(path=item.url | trim_start_matches(pat='/')) | safe }}{% endif %}">{{ item.name }}</a>
             <span class="separator" aria-hidden="true">/</span>
             {% endif %}
         </li>
