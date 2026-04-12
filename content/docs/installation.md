@@ -54,7 +54,7 @@ Move-Item hx.exe $env:LOCALAPPDATA\Programs\hx\
 
 ### From Source
 
-Building from source requires Rust 1.92.0 or later:
+Building from source requires Rust 1.94.1 or later:
 
 ```bash
 git clone https://github.com/arcanist-sh/hx
