@@ -33,28 +33,34 @@ hx provides pre-built binaries for:
 
 ### From GitHub Releases
 
-Download the latest release for your platform from [GitHub Releases](https://github.com/arcanist-sh/hx/releases).
+Download the latest release for your platform from [GitHub Releases](https://github.com/arcanist-sh/hx/releases). Release assets are versioned, so set `VERSION` to a tag from the releases page (latest is `0.7.0`):
 
 ```bash
+# Pick the version to install
+VERSION=0.7.0
+
 # Linux x86_64
-curl -LO https://github.com/arcanist-sh/hx/releases/latest/download/hx-x86_64-unknown-linux-gnu.tar.gz
-tar xzf hx-x86_64-unknown-linux-gnu.tar.gz
+curl -LO https://github.com/arcanist-sh/hx/releases/download/v${VERSION}/hx-v${VERSION}-x86_64-unknown-linux-gnu.tar.gz
+tar xzf hx-v${VERSION}-x86_64-unknown-linux-gnu.tar.gz
 sudo mv hx /usr/local/bin/
 
 # macOS Apple Silicon
-curl -LO https://github.com/arcanist-sh/hx/releases/latest/download/hx-aarch64-apple-darwin.tar.gz
-tar xzf hx-aarch64-apple-darwin.tar.gz
+curl -LO https://github.com/arcanist-sh/hx/releases/download/v${VERSION}/hx-v${VERSION}-aarch64-apple-darwin.tar.gz
+tar xzf hx-v${VERSION}-aarch64-apple-darwin.tar.gz
 sudo mv hx /usr/local/bin/
 
 # Windows (PowerShell)
-Invoke-WebRequest -Uri https://github.com/arcanist-sh/hx/releases/latest/download/hx-x86_64-pc-windows-msvc.zip -OutFile hx.zip
+$Version = "0.7.0"
+Invoke-WebRequest -Uri "https://github.com/arcanist-sh/hx/releases/download/v$Version/hx-v$Version-x86_64-pc-windows-msvc.zip" -OutFile hx.zip
 Expand-Archive hx.zip -DestinationPath .
 Move-Item hx.exe $env:LOCALAPPDATA\Programs\hx\
 ```
 
+Each archive ships with a matching `.sha256`, and a combined `checksums.txt` is attached to every release for verification.
+
 ### From Source
 
-Building from source requires Rust 1.94.1 or later:
+Building from source requires Rust 1.96.0 or later (the pinned toolchain in `rust-toolchain.toml`; also the workspace MSRV):
 
 ```bash
 git clone https://github.com/arcanist-sh/hx
@@ -80,7 +86,7 @@ hx --version
 You should see output like:
 
 ```
-hx 0.4.0
+hx 0.7.0
 ```
 
 ## Shell Completions
