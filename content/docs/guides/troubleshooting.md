@@ -45,10 +45,10 @@ source ~/.bashrc
 error: Permission denied installing to /usr/local/bin
 ```
 
-**Solution**: Use user-local install
+**Solution**: Use a user-local install directory via `HX_INSTALL_DIR`
 
 ```bash
-curl -fsSL https://arcanist.sh/hx/install.sh | sh -s -- --prefix ~/.local
+curl -fsSL https://arcanist.sh/hx/install.sh | HX_INSTALL_DIR="$HOME/.local/bin" sh
 ```
 
 ## Toolchain Issues
