@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install hx
-        run: curl -fsSL https://get.arcanist.sh/hx | sh
+        run: curl -fsSL https://arcanist.sh/hx/install.sh | sh
 
       - name: Cache dependencies
         uses: actions/cache@v4
@@ -78,14 +78,16 @@ jobs:
 
       - name: Install hx (Unix)
         if: runner.os != 'Windows'
-        run: curl -fsSL https://get.arcanist.sh/hx | sh
+        run: curl -fsSL https://arcanist.sh/hx/install.sh | sh
 
       - name: Install hx (Windows)
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
-          Invoke-WebRequest -Uri https://get.arcanist.sh/hx.ps1 -OutFile hx-install.ps1
-          ./hx-install.ps1
+          $Tag = (Invoke-RestMethod https://api.github.com/repos/arcanist-sh/hx/releases/latest).tag_name
+          Invoke-WebRequest -Uri "https://github.com/arcanist-sh/hx/releases/download/$Tag/hx-$Tag-x86_64-pc-windows-msvc.zip" -OutFile hx.zip
+          Expand-Archive hx.zip -DestinationPath hx-bin
+          Add-Content $env:GITHUB_PATH (Resolve-Path hx-bin).Path
 
       - name: Cache
         uses: actions/cache@v4
@@ -118,7 +120,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install hx
-        run: curl -fsSL https://get.arcanist.sh/hx | sh
+        run: curl -fsSL https://arcanist.sh/hx/install.sh | sh
 
       - name: Install GHC ${{ matrix.ghc }}
         run: hx toolchain install --ghc ${{ matrix.ghc }}
@@ -157,7 +159,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install hx
-        run: curl -fsSL https://get.arcanist.sh/hx | sh
+        run: curl -fsSL https://arcanist.sh/hx/install.sh | sh
 
       - name: Build release
         run: |
@@ -204,7 +206,7 @@ cache:
     - dist-newstyle/
 
 before_script:
-  - curl -fsSL https://get.arcanist.sh/hx | sh
+  - curl -fsSL https://arcanist.sh/hx/install.sh | sh
   - hx toolchain install --ghc $GHC_VERSION
 
 build:
@@ -255,7 +257,7 @@ jobs:
             - deps-{{ checksum "hx.lock" }}
       - run:
           name: Install hx
-          command: curl -fsSL https://get.arcanist.sh/hx | sh
+          command: curl -fsSL https://arcanist.sh/hx/install.sh | sh
       - run:
           name: Setup toolchain
           command: hx toolchain install
@@ -345,7 +347,7 @@ env:
 FROM haskell:9.8.2
 
 # Install hx
-RUN curl -fsSL https://get.arcanist.sh/hx | sh
+RUN curl -fsSL https://arcanist.sh/hx/install.sh | sh
 
 WORKDIR /app
 

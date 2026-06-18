@@ -48,7 +48,7 @@ error: Permission denied installing to /usr/local/bin
 **Solution**: Use user-local install
 
 ```bash
-curl -fsSL https://get.arcanist.sh/hx | sh -s -- --prefix ~/.local
+curl -fsSL https://arcanist.sh/hx/install.sh | sh -s -- --prefix ~/.local
 ```
 
 ## Toolchain Issues

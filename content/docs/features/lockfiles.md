@@ -228,7 +228,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup hx
-        run: curl -fsSL https://get.arcanist.sh/hx | sh
+        run: curl -fsSL https://arcanist.sh/hx/install.sh | sh
 
       - name: Verify lockfile
         run: hx lock --frozen

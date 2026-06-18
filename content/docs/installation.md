@@ -8,7 +8,7 @@ weight = 1
 The fastest way to install hx is via the install script:
 
 ```bash
-curl -fsSL https://get.arcanist.sh/hx | sh
+curl -fsSL https://arcanist.sh/hx/install.sh | sh
 ```
 
 This script will:
@@ -33,11 +33,11 @@ hx provides pre-built binaries for:
 
 ### From GitHub Releases
 
-Download the latest release for your platform from [GitHub Releases](https://github.com/arcanist-sh/hx/releases). Release assets are versioned, so set `VERSION` to a tag from the releases page (latest is `0.7.0`):
+Download the latest release for your platform from [GitHub Releases](https://github.com/arcanist-sh/hx/releases). Release assets are versioned, so set `VERSION` to a tag from the releases page (latest is `0.7.1`):
 
 ```bash
 # Pick the version to install
-VERSION=0.7.0
+VERSION=0.7.1
 
 # Linux x86_64
 curl -LO https://github.com/arcanist-sh/hx/releases/download/v${VERSION}/hx-v${VERSION}-x86_64-unknown-linux-gnu.tar.gz
@@ -50,7 +50,7 @@ tar xzf hx-v${VERSION}-aarch64-apple-darwin.tar.gz
 sudo mv hx /usr/local/bin/
 
 # Windows (PowerShell)
-$Version = "0.7.0"
+$Version = "0.7.1"
 Invoke-WebRequest -Uri "https://github.com/arcanist-sh/hx/releases/download/v$Version/hx-v$Version-x86_64-pc-windows-msvc.zip" -OutFile hx.zip
 Expand-Archive hx.zip -DestinationPath .
 Move-Item hx.exe $env:LOCALAPPDATA\Programs\hx\
@@ -86,7 +86,7 @@ hx --version
 You should see output like:
 
 ```
-hx 0.7.0
+hx 0.7.1
 ```
 
 ## Shell Completions
@@ -174,7 +174,7 @@ To update to the latest version:
 
 ```bash
 # Using the install script
-curl -fsSL https://get.arcanist.sh/hx | sh
+curl -fsSL https://arcanist.sh/hx/install.sh | sh
 
 # Or if installed via cargo
 cargo install hx-cli --force
