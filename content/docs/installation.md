@@ -33,11 +33,11 @@ hx provides pre-built binaries for:
 
 ### From GitHub Releases
 
-Download the latest release for your platform from [GitHub Releases](https://github.com/arcanist-sh/hx/releases). Release assets are versioned, so set `VERSION` to a tag from the releases page (latest is `0.7.7`):
+Download from [GitHub Releases](https://github.com/arcanist-sh/hx/releases) — the latest release is **{{ hx_version() }}**. Release assets are versioned; the commands below resolve the latest tag automatically (set `VERSION` to a specific tag to pin it).
 
 ```bash
-# Pick the version to install
-VERSION=0.7.7
+# Resolve the latest release tag (or set VERSION=X.Y.Z to pin a version)
+VERSION=$(curl -fsSL https://api.github.com/repos/arcanist-sh/hx/releases/latest | grep '"tag_name"' | head -1 | cut -d'"' -f4 | sed 's/^v//')
 
 # Linux x86_64
 curl -LO https://github.com/arcanist-sh/hx/releases/download/v${VERSION}/hx-v${VERSION}-x86_64-unknown-linux-gnu.tar.gz
@@ -50,7 +50,7 @@ tar xzf hx-v${VERSION}-aarch64-apple-darwin.tar.gz
 sudo mv hx /usr/local/bin/
 
 # Windows (PowerShell)
-$Version = "0.7.7"
+$Version = ((Invoke-RestMethod https://api.github.com/repos/arcanist-sh/hx/releases/latest).tag_name).TrimStart('v')
 Invoke-WebRequest -Uri "https://github.com/arcanist-sh/hx/releases/download/v$Version/hx-v$Version-x86_64-pc-windows-msvc.zip" -OutFile hx.zip
 Expand-Archive hx.zip -DestinationPath .
 Move-Item hx.exe $env:LOCALAPPDATA\Programs\hx\
@@ -83,11 +83,7 @@ After installation, verify hx is working:
 hx --version
 ```
 
-You should see output like:
-
-```
-hx 0.7.7
-```
+You should see output like `hx X.Y.Z` — the version you just installed (currently **{{ hx_version() }}**).
 
 ## Shell Completions
 

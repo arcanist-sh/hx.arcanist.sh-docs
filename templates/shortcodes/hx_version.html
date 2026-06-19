@@ -1,0 +1,2 @@
+{%- set release = load_data(url="https://api.github.com/repos/arcanist-sh/hx/releases/latest", format="json", required=false) -%}
+{%- if release and release.tag_name -%}{{ release.tag_name | trim_start_matches(pat="v") }}{%- else -%}the latest release{%- endif -%}
