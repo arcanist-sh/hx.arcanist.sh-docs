@@ -61,6 +61,16 @@ Additional utility commands.
 | [watch](@/docs/commands/watch.md) | Watch mode for auto-rebuild |
 | [doctor](@/docs/commands/doctor.md) | Diagnose environment issues |
 
+### AI Agents
+
+Drive hx from an AI coding agent.
+
+| Command | Description |
+|---------|-------------|
+| [mcp](@/docs/commands/mcp.md) | Run an MCP server exposing hx as agent tools |
+
+See [Using hx with AI agents](@/docs/guides/ai-agents.md) for the full agent surface.
+
 ## Global Options
 
 These options are available for all commands:

@@ -17,6 +17,7 @@ Step-by-step tutorials and workflow guides for common tasks.
 ## Workflows
 
 - **[Development Workflow](@/docs/guides/development-workflow.md)** — Day-to-day development
+- **[Using hx with AI Agents](@/docs/guides/ai-agents.md)** — MCP server, AGENTS.md, skill, and llms.txt
 - **[Troubleshooting](@/docs/guides/troubleshooting.md)** — Common issues and solutions
 
 ## Quick Reference
