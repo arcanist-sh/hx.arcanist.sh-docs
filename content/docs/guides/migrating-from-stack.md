@@ -18,11 +18,15 @@ Stack and hx serve similar purposes but with different approaches:
 
 ## Quick Migration
 
+The fastest way to adopt hx is `hx import --from stack`, which reads
+`stack.yaml` in place — handling the resolver, multi-package layouts, and
+`extra-deps` — and generates `hx.toml` for you:
+
 ```bash
 cd my-stack-project
 
-# Initialize hx
-hx init --detect
+# Adopt the existing Stack project
+hx import --from stack
 
 # Generate lockfile
 hx lock
@@ -34,7 +38,18 @@ hx build
 hx test
 ```
 
+You do **not** need to delete `stack.yaml` to get started — `import` reads it
+where it is. A multi-package Stack project is imported as a
+[workspace](@/docs/guides/workspaces.md).
+
+> Prefer to hand-tune the configuration instead? Use
+> [`hx init --detect`](@/docs/commands/init.md) and follow the
+> [Step-by-Step](#step-by-step-migration) section below.
+
 ## Step-by-Step Migration
+
+These steps use `hx init` as an alternative to `hx import` when you want to
+review each piece of configuration by hand.
 
 ### 1. Analyze Your Stack Project
 
@@ -121,10 +136,13 @@ hx test
 
 ### 7. Clean Up (Optional)
 
-After migration is complete:
+hx never requires you to remove `stack.yaml` — it is read in place during
+import and ignored afterward, so you can keep Stack and hx side by side
+indefinitely. Only once you are confident in the migration, and only if you no
+longer want Stack at all, remove the Stack files:
 
 ```bash
-# Remove Stack files (optional)
+# Remove Stack files (optional, after you're confident)
 rm stack.yaml stack.yaml.lock
 
 # Keep .cabal file - it's still needed
@@ -297,6 +315,8 @@ After migrating to hx:
 
 ## See Also
 
+- [hx import](@/docs/commands/import.md) — Adopt an existing Stack project
 - [hx init](@/docs/commands/init.md) — Initialize hx
 - [hx lock](@/docs/commands/lock.md) — Generate lockfile
+- [Workspaces](@/docs/guides/workspaces.md) — Multi-package projects
 - [Configuration](@/docs/configuration/hx-toml.md) — hx.toml reference

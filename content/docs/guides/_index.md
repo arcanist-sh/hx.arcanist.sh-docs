@@ -13,6 +13,7 @@ Step-by-step tutorials and workflow guides for common tasks.
 - **[Migrating from Stack](@/docs/guides/migrating-from-stack.md)** — Move a Stack project to hx
 - **[Migrating from Cabal](@/docs/guides/migrating-from-cabal.md)** — Adopt hx in a Cabal project
 - **[Creating a Library](@/docs/guides/creating-library.md)** — Build and publish a library
+- **[Workspaces](@/docs/guides/workspaces.md)** — Multi-package projects
 
 ## Workflows
 
@@ -35,7 +36,7 @@ hx test
 
 ```bash
 cd existing-project
-hx init
+hx import --from cabal   # or: --from stack
 hx lock
 hx build
 ```

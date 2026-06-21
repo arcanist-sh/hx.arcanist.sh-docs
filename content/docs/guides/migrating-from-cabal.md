@@ -11,11 +11,14 @@ Migrating from plain Cabal to hx is straightforward because hx uses Cabal under 
 
 ## Quick Migration
 
+The fastest way to adopt hx is `hx import --from cabal`, which reads your
+existing Cabal configuration and generates `hx.toml` for you:
+
 ```bash
 cd my-cabal-project
 
-# Initialize hx
-hx init
+# Adopt the existing Cabal project
+hx import --from cabal
 
 # Generate lockfile
 hx lock
@@ -23,6 +26,15 @@ hx lock
 # Build (uses existing Cabal setup)
 hx build
 ```
+
+`hx import` works whether or not you have a `cabal.project`. With only a bare
+`.cabal` file it is treated as a single-package project; a `cabal.project`
+listing several local packages is imported as a
+[workspace](@/docs/guides/workspaces.md).
+
+> Prefer to start from a minimal, hand-tuned config instead? Use
+> [`hx init`](@/docs/commands/init.md) — see [Step-by-Step](#step-by-step-migration)
+> below.
 
 ## What Changes
 
@@ -41,6 +53,9 @@ hx build
 - Build output — Same location
 
 ## Step-by-Step Migration
+
+These steps use `hx init` as an alternative to `hx import` when you want to
+hand-tune the configuration.
 
 ### 1. Initialize hx
 
@@ -234,6 +249,8 @@ hx build --verbose
 
 ## See Also
 
+- [hx import](@/docs/commands/import.md) — Adopt an existing Cabal project
 - [hx init](@/docs/commands/init.md) — Initialize hx
+- [Workspaces](@/docs/guides/workspaces.md) — Multi-package projects
 - [Configuration](@/docs/configuration/hx-toml.md) — hx.toml reference
 - [Lockfiles](@/docs/features/lockfiles.md) — Reproducible builds

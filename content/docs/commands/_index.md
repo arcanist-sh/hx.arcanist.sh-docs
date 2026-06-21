@@ -29,6 +29,7 @@ Commands for creating and managing projects.
 |---------|-------------|
 | [new](@/docs/commands/new.md) | Create a new project |
 | [init](@/docs/commands/init.md) | Initialize hx in existing project |
+| [import](@/docs/commands/import.md) | Adopt an existing Cabal/Stack project |
 | [add](@/docs/commands/add.md) | Add dependencies |
 | [remove](@/docs/commands/remove.md) | Remove dependencies |
 | [update](@/docs/commands/update.md) | Update dependencies |
@@ -41,6 +42,8 @@ Commands for managing dependencies and lockfiles.
 | [lock](@/docs/commands/lock.md) | Generate/update lockfile |
 | [sync](@/docs/commands/sync.md) | Sync dependencies from lockfile |
 | [outdated](@/docs/commands/outdated.md) | Check for outdated dependencies |
+| [why](@/docs/commands/why.md) | Explain why a package is in the graph |
+| [deps](@/docs/commands/deps.md) | Inspect the dependency graph |
 
 ### Toolchain Management
 Commands for managing the Haskell toolchain.

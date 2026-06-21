@@ -68,6 +68,26 @@ hx lock --force
 - Dependency graph
 - Toolchain requirements
 
+For a single-package project, `hx lock` produces a fully populated lockfile, so
+[`hx why`](@/docs/commands/why.md), [`hx deps`](@/docs/commands/deps.md), and
+[`hx outdated`](@/docs/commands/outdated.md) all have a resolved graph to work
+from.
+
+### Conditional Evaluation
+
+The native solver evaluates `.cabal` conditionals — `if` / `elif` / `else` with
+`os(...)`, `arch(...)`, `impl(ghc ...)`, and `flag(...)` — against the target GHC
+and host platform. As a result, platform- or compiler-specific dependencies do
+**not** leak into the lockfile (for example, `Win32` on non-Windows, or
+`semigroups` on a modern GHC). Dependencies of disabled components
+(`buildable: False`) are likewise excluded.
+
+### Workspaces
+
+In a [workspace](@/docs/guides/workspaces.md), the lockfile records local members
+in a `[workspace]` section (with their paths) and external dependencies as
+`[[packages]]` entries.
+
 ### Example hx.lock
 
 ```toml
@@ -174,3 +194,6 @@ hx lock
 - [hx sync](@/docs/commands/sync.md) — Install from lockfile
 - [hx update](@/docs/commands/update.md) — Update dependencies
 - [hx add](@/docs/commands/add.md) — Add dependencies
+- [hx why](@/docs/commands/why.md) — Explain why a package is in the graph
+- [hx deps](@/docs/commands/deps.md) — Inspect the dependency graph
+- [Workspaces](@/docs/guides/workspaces.md) — Multi-package projects

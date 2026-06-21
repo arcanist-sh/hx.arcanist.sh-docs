@@ -248,6 +248,10 @@ my-app/
 
 ### Multi-Package (Workspace)
 
+A `cabal.project` listing several local packages is a workspace. `hx build` and
+`hx test` operate on all members by default; use `--package <name>` to target
+one. See the [Workspaces guide](@/docs/guides/workspaces.md) for details.
+
 ```
 my-workspace/
 ├── packages/
@@ -369,3 +373,5 @@ Minimize files in project root. Use subdirectories for organization.
 
 - [hx new](@/docs/commands/new.md) — Create new project
 - [hx init](@/docs/commands/init.md) — Initialize existing project
+- [hx import](@/docs/commands/import.md) — Adopt an existing Cabal/Stack project
+- [Workspaces](@/docs/guides/workspaces.md) — Multi-package projects

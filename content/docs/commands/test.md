@@ -25,6 +25,7 @@ The `test` command builds and runs your project's test suite. It supports filter
     --no-run            Build tests without running
     --coverage          Generate test coverage report
     --fail-fast         Stop on first test failure
+    --package <NAME>    Test only the named workspace package
 ```
 
 ### Build Options
@@ -222,6 +223,24 @@ Or run all:
 hx test
 ```
 
+## Multi-Package Workspaces
+
+In a [workspace](@/docs/guides/workspaces.md) — a `cabal.project` listing several
+local packages — `hx test` runs the test suites of **all** members by default
+(via Cabal's `all` target):
+
+```bash
+# Test every package in the workspace
+hx test
+```
+
+To test a single member, target it by name:
+
+```bash
+# Test only the `cli` package
+hx test --package cli
+```
+
 ## CI Integration
 
 For continuous integration:
@@ -251,3 +270,4 @@ In GitHub Actions:
 - [hx build](@/docs/commands/build.md) — Build without testing
 - [hx watch test](@/docs/commands/watch.md) — Auto-run tests on changes
 - [hx bench](@/docs/commands/bench.md) — Run benchmarks
+- [Workspaces](@/docs/guides/workspaces.md) — Multi-package projects

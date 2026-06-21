@@ -29,6 +29,7 @@ hx wraps Cabal's build system, providing a streamlined interface with better err
     --test              Build only tests
     --bench             Build only benchmarks
     --all               Build all components
+    --package <NAME>    Build only the named workspace package
 ```
 
 ### Compiler Options
@@ -116,6 +117,27 @@ hx build --ghc-options="-Werror"
 hx build --ghc-options="-XOverloadedStrings -XDeriveGeneric"
 ```
 
+## Multi-Package Workspaces
+
+In a [workspace](@/docs/guides/workspaces.md) — a `cabal.project` listing several
+local packages — `hx build` builds **all** members by default (via Cabal's `all`
+target):
+
+```bash
+# Build every package in the workspace
+hx build
+```
+
+To build a single member, target it by name:
+
+```bash
+# Build only the `core` package
+hx build --package core
+```
+
+Packages with `build-type: Custom` (a custom `Setup.hs`) build correctly — hx
+delegates them to Cabal.
+
 ## Configuration
 
 Build behavior can be configured in `hx.toml`:
@@ -166,3 +188,4 @@ hx clean && hx build
 - [hx check](@/docs/commands/check.md) — Type check without full compilation
 - [hx clean](@/docs/commands/clean.md) — Remove build artifacts
 - [Compiler Backends](@/docs/features/compiler-backends.md) — Using GHC vs BHC
+- [Workspaces](@/docs/guides/workspaces.md) — Multi-package projects

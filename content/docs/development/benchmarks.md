@@ -7,13 +7,18 @@ weight = 10
 
 Numbers, not adjectives. Here's the methodology and the measurements behind hx's speed claims — honest about where the numbers come from and what wasn't re-measured.
 
-> **Measured with hx 0.7.7.** hx is faster than cabal on all four operations measured here — cold builds, CLI startup, no-op incremental rebuilds, and clean. stack was not re-measured for this release, so it is omitted rather than estimated.
+> **Methodology current as of hx 0.8.0; numbers last measured on hx 0.7.7.** The
+> measurements below were taken on 0.7.7 and have not been re-run for 0.8.0, but
+> the methodology and the operations covered are unchanged and still
+> representative. hx is faster than cabal on all four operations measured here —
+> cold builds, CLI startup, no-op incremental rebuilds, and clean. stack was not
+> re-measured, so it is omitted rather than estimated.
 
 ## Test Environment
 
 | Property | Value |
 |----------|-------|
-| **hx version** | 0.7.7 |
+| **hx version** | 0.7.7 (methodology current as of 0.8.0) |
 | **GHC version** | 9.8.2 |
 | **Cabal version** | 3.12.1.0 |
 | **stack** | not measured |
@@ -72,6 +77,6 @@ hyperfine --warmup 3 'hx build --native' 'cabal build'
 
 The full methodology and exact test files live in [`docs/BENCHMARKS.md`](https://github.com/arcanist-sh/hx/blob/main/docs/BENCHMARKS.md).
 
-## Not Re-Measured for 0.7.7
+## Not Re-Measured
 
-Project init, single-file-change incremental builds, preprocessor overhead, dependency-resolution/solver scaling, and memory usage were measured on older releases but have **not** been re-run for 0.7.7. Rather than present stale figures as current, they're omitted here. Contributions welcome — [open an issue](https://github.com/arcanist-sh/hx/issues).
+Project init, single-file-change incremental builds, preprocessor overhead, dependency-resolution/solver scaling, and memory usage were measured on older releases but have **not** been re-run for 0.7.7 or 0.8.0. Rather than present stale figures as current, they're omitted here. Contributions welcome — [open an issue](https://github.com/arcanist-sh/hx/issues).
