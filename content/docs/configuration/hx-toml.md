@@ -101,7 +101,7 @@ options = ["-Wall"]           # Default GHC options
 
 ### [compiler.bhc]
 
-BHC (Basel Haskell Compiler) configuration.
+bhc (Basel Haskell Compiler) configuration.
 
 ```toml
 [compiler.bhc]
@@ -111,7 +111,7 @@ tensor_fusion = false         # Enable tensor fusion optimization
 target = "aarch64-linux-gnu"  # Cross-compilation target
 ```
 
-#### BHC Profiles
+#### bhc Profiles
 
 | Profile | Description |
 |---------|-------------|
@@ -127,7 +127,7 @@ target = "aarch64-linux-gnu"  # Cross-compilation target
 [compiler]
 backend = "ghc"
 
-# Use BHC with numeric optimizations
+# Use bhc with numeric optimizations
 [compiler]
 backend = "bhc"
 
@@ -138,7 +138,7 @@ tensor_fusion = true
 
 ## [bhc-platform]
 
-BHC Platform curated snapshot configuration. This is the BHC equivalent of Stackage — a curated set of packages verified to build together under BHC.
+bhc Platform curated snapshot configuration. This is the bhc equivalent of Stackage — a curated set of packages verified to build together under bhc.
 
 ```toml
 [bhc-platform]
@@ -151,14 +151,14 @@ extra_deps = {}                    # Override specific package versions
 
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
-| `snapshot` | string | none | BHC Platform snapshot identifier |
+| `snapshot` | string | none | bhc Platform snapshot identifier |
 | `allow_newer` | bool | `false` | Allow packages from Hackage outside the snapshot |
 | `extra_deps` | table | `{}` | Override specific package versions |
 
 ### Examples
 
 ```toml
-# Use a BHC Platform snapshot
+# Use a bhc Platform snapshot
 [compiler]
 backend = "bhc"
 
@@ -172,7 +172,7 @@ allow_newer = true
 extra_deps = { my-custom-lib = "1.0.0" }
 ```
 
-> **Note:** BHC Platform snapshots are only applied when `[compiler].backend = "bhc"`. For GHC projects, use Stackage snapshots via `[toolchain].resolver`.
+> **Note:** bhc Platform snapshots are only applied when `[compiler].backend = "bhc"`. For GHC projects, use Stackage snapshots via `[toolchain].resolver`.
 
 See [hx bhc-platform](@/docs/commands/bhc-platform.md) for CLI commands.
 
@@ -457,7 +457,7 @@ exclude = [".git/**", "dist-newstyle/**"]
 lock-strategy = "hx"
 ```
 
-### Complete BHC Example
+### Complete bhc Example
 
 ```toml
 [project]

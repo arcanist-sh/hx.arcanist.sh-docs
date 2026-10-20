@@ -25,7 +25,7 @@ hx supports cross-compilation, allowing you to build binaries for:
 | `aarch64-apple-darwin` | macOS Apple Silicon |
 | `x86_64-pc-windows-msvc` | Windows x86_64 |
 
-### BHC Additional Targets
+### bhc Additional Targets
 
 | Target | Description |
 |--------|-------------|
@@ -43,7 +43,7 @@ hx build --target aarch64-linux-gnu
 # Build for macOS Intel from ARM Mac
 hx build --target x86_64-apple-darwin
 
-# Build for WebAssembly (requires BHC)
+# Build for WebAssembly (requires bhc)
 hx build --backend bhc --target wasm32-wasi
 ```
 
@@ -84,13 +84,13 @@ ghcup install ghc --cross aarch64-linux-gnu 9.8.2
 hx toolchain install --ghc 9.8.2 --target aarch64-linux-gnu
 ```
 
-#### BHC Cross-Compilers
+#### bhc Cross-Compilers
 
-BHC includes multi-target support:
+bhc includes multi-target support:
 
 ```bash
 hx toolchain install --bhc 0.2.0
-# BHC can target multiple platforms from single install
+# bhc can target multiple platforms from single install
 ```
 
 ### Target Libraries
@@ -135,7 +135,7 @@ hx build --target x86_64-linux-gnu --release
 
 ### WebAssembly
 
-Requires BHC backend:
+Requires bhc backend:
 
 ```bash
 hx build --backend bhc --target wasm32-wasi --release
@@ -282,5 +282,5 @@ ghc-options = ["-static"]
 ## See Also
 
 - [hx build](@/docs/commands/build.md) — Build command
-- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC and BHC
+- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC and bhc
 - [Toolchain Management](@/docs/features/toolchain.md) — Installing compilers

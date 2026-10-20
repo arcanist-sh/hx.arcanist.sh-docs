@@ -15,7 +15,7 @@ hx drives GHC and Cabal rather than replacing them, and adds what they leave to 
 - **Workspaces**: multi-package projects with `cabal.project` as the single member list, and `--changed` to act only on what a branch affects
 - **Batteries included**: format, lint, test, coverage, profiling, documentation and publishing in one tool
 - **Agents**: an MCP server (`hx mcp`) that exposes the same commands to AI agents
-- **Two compilers**: GHC by default, and [BHC](https://arcanist.sh/bhc/) with one setting
+- **Two compilers**: GHC by default, and [bhc](https://arcanist.sh/bhc/) with one setting
 
 New here? Start with [Installation](@/docs/installation.md) and the [Quick Start](@/docs/quickstart.md). The overview, benchmarks and release notes live on [arcanist.sh/hx](https://arcanist.sh/hx/).
 

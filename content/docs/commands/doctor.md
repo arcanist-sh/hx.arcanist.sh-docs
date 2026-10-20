@@ -63,7 +63,7 @@ Checking environment...
 ✓ Cabal 3.10.3.0 installed at /Users/user/.ghcup/bin/cabal
 ✓ GHCup 0.1.22.0 installed at /Users/user/.ghcup/bin/ghcup
 ✓ HLS 2.6.0.0 installed at /Users/user/.ghcup/bin/haskell-language-server-wrapper
-✗ BHC not installed
+✗ bhc not installed
 
 Checking project...
 
@@ -92,7 +92,7 @@ Fixes available:
 | Cabal installed | Cabal build tool is available |
 | GHCup installed | Toolchain manager (optional) |
 | HLS installed | Language server (optional) |
-| BHC installed | Alternative compiler (if configured) |
+| bhc installed | Alternative compiler (if configured) |
 
 ### Project Checks
 
@@ -205,10 +205,10 @@ hint: Check HLS compatibility at
 fix: Run `hx lock` to update
 ```
 
-### BHC Not Installed
+### bhc Not Installed
 
 ```
-✗ BHC not installed (required by hx.toml)
+✗ bhc not installed (required by hx.toml)
     [compiler]
     backend = "bhc"
 

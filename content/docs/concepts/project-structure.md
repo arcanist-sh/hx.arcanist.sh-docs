@@ -170,8 +170,8 @@ hx-specific metadata (gitignored):
 ```
 .hx/
 ├── cache/                 # hx cache
-├── bhc.toml               # Generated BHC manifest (if using BHC)
-└── bhc-reports/           # BHC optimization reports
+├── bhc.toml               # Generated bhc manifest (if using bhc)
+└── bhc-reports/           # bhc optimization reports
 ```
 
 ## Configuration Files

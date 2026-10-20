@@ -61,7 +61,7 @@ hx/
 │   ├── hx-toolchain/      # Toolchain management
 │   ├── hx-compiler/       # Compiler abstraction
 │   ├── hx-cabal/          # Cabal wrapper
-│   ├── hx-bhc/            # BHC backend
+│   ├── hx-bhc/            # bhc backend
 │   ├── hx-lock/           # Lockfile handling
 │   ├── hx-doctor/         # Diagnostics
 │   ├── hx-ui/             # Terminal UI
@@ -75,10 +75,10 @@ hx/
 | `hx-cli` | Command parsing, dispatch |
 | `hx-core` | Project context, orchestration |
 | `hx-config` | Parse hx.toml, merge defaults |
-| `hx-toolchain` | Detect/install GHC, Cabal, BHC |
+| `hx-toolchain` | Detect/install GHC, Cabal, bhc |
 | `hx-compiler` | Compiler backend abstraction |
 | `hx-cabal` | Cabal command execution |
-| `hx-bhc` | BHC backend implementation |
+| `hx-bhc` | bhc backend implementation |
 | `hx-lock` | Lockfile read/write |
 | `hx-doctor` | Health checks |
 | `hx-ui` | Progress, spinners, colors |
@@ -126,7 +126,7 @@ pub trait CompilerBackend: Send + Sync {
 
 Implementations:
 - `GhcBackend` — Wraps Cabal for GHC builds
-- `BhcBackend` — Invokes BHC directly
+- `BhcBackend` — Invokes bhc directly
 
 ### Configuration Layering
 

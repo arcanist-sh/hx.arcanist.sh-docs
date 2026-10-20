@@ -3,7 +3,7 @@ title = "Toolchain Management"
 weight = 3
 +++
 
-hx provides integrated management of Haskell toolchains including GHC, Cabal, and BHC.
+hx provides integrated management of Haskell toolchains including GHC, Cabal, and bhc.
 
 ## Overview
 
@@ -20,7 +20,7 @@ hx can:
 |------|-------------|
 | **GHC** | Glasgow Haskell Compiler |
 | **Cabal** | Build tool and package manager |
-| **BHC** | Basel Haskell Compiler |
+| **bhc** | Basel Haskell Compiler |
 | **GHCup** | Haskell toolchain installer |
 | **HLS** | Haskell Language Server |
 
@@ -50,7 +50,7 @@ hx toolchain install --cabal 3.10.3.0
 # Install both
 hx toolchain install --ghc 9.8.2 --cabal 3.10.3.0
 
-# Install BHC
+# Install bhc
 hx toolchain install --bhc 0.2.0
 ```
 
@@ -65,7 +65,7 @@ hx toolchain available --ghc
 # Available Cabal versions
 hx toolchain available --cabal
 
-# Available BHC versions
+# Available bhc versions
 hx toolchain available --bhc
 ```
 
@@ -88,7 +88,7 @@ Cabal versions:
   3.10.3.0 (active)
   3.8.1.0
 
-BHC versions:
+bhc versions:
   0.2.0 (active)
 ```
 
@@ -101,7 +101,7 @@ hx toolchain use --ghc 9.8.2
 # Set active Cabal
 hx toolchain use --cabal 3.10.3.0
 
-# Set active BHC
+# Set active bhc
 hx toolchain use --bhc 0.2.0
 ```
 
@@ -111,7 +111,7 @@ hx toolchain use --bhc 0.2.0
 # Remove specific version
 hx toolchain remove --ghc 9.6.4
 
-# Remove BHC version
+# Remove bhc version
 hx toolchain remove --bhc 0.1.0
 ```
 
@@ -191,7 +191,7 @@ Benefits:
 Installation locations:
 - GHC: `~/.hx/toolchains/ghc-<version>/`
 - Cabal: `~/.hx/toolchains/cabal-<version>/`
-- BHC: `~/.bhc/versions/<version>/`
+- bhc: `~/.bhc/versions/<version>/`
 
 ## Version Resolution
 
@@ -228,7 +228,7 @@ Output:
 ✓ Cabal 3.10.3.0 installed
 ✓ GHCup 0.1.22.0 available
 ✓ HLS 2.6.0.0 installed
-✓ BHC 0.2.0 installed
+✓ bhc 0.2.0 installed
 ```
 
 ## Platform-Specific Notes
@@ -267,7 +267,7 @@ Install via:
 |----------|-------------|
 | `HX_GHC` | Override GHC path |
 | `HX_CABAL` | Override Cabal path |
-| `HX_BHC` | Override BHC path |
+| `HX_BHC` | Override bhc path |
 | `HX_GHCUP` | Override GHCup path |
 
 ## Best Practices

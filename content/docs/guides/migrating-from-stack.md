@@ -310,7 +310,7 @@ After migrating to hx:
 1. **Unified tooling** — Same GHC used for all tools
 2. **Faster builds** — Better caching in some scenarios
 3. **Modern lockfile** — TOML format with checksums
-4. **BHC support** — Alternative compiler backend
+4. **bhc support** — Alternative compiler backend
 5. **Better diagnostics** — Improved error messages
 
 ## See Also

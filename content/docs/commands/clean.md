@@ -85,7 +85,7 @@ dist-newstyle/
 dist-newstyle/
 .hx/
   ├── cache/         # hx-specific cache
-  └── bhc.toml       # Generated BHC manifest
+  └── bhc.toml       # Generated bhc manifest
 ```
 
 ## When to Clean

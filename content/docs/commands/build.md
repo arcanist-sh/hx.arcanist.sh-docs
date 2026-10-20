@@ -93,7 +93,7 @@ hx build --test
 # Build with GHC (default)
 hx build --backend ghc
 
-# Build with BHC (Basel Haskell Compiler)
+# Build with bhc (Basel Haskell Compiler)
 hx build --backend bhc
 ```
 
@@ -187,5 +187,5 @@ hx clean && hx build
 - [hx run](@/docs/commands/run.md) — Build and run the executable
 - [hx check](@/docs/commands/check.md) — Type check without full compilation
 - [hx clean](@/docs/commands/clean.md) — Remove build artifacts
-- [Compiler Backends](@/docs/features/compiler-backends.md) — Using GHC vs BHC
+- [Compiler Backends](@/docs/features/compiler-backends.md) — Using GHC vs bhc
 - [Workspaces](@/docs/guides/workspaces.md) — Multi-package projects

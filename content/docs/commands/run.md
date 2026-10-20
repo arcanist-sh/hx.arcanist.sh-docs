@@ -83,10 +83,10 @@ hx run --release
 hx run --no-build
 ```
 
-### Using BHC Backend
+### Using bhc Backend
 
 ```bash
-# Run using the BHC compiler backend
+# Run using the bhc compiler backend
 hx run --backend bhc
 ```
 

@@ -1,13 +1,13 @@
 +++
-title = "BHC Platform"
+title = "bhc Platform"
 weight = 2
 +++
 
-BHC Platform provides curated package snapshots for the BHC (Basel Haskell Compiler) backend — the BHC equivalent of [Stackage](https://www.stackage.org/).
+bhc Platform provides curated package snapshots for the bhc (Basel Haskell Compiler) backend — the bhc equivalent of [Stackage](https://www.stackage.org/).
 
 ## Overview
 
-When using the BHC backend, BHC Platform snapshots provide a set of packages verified to build and work together. This gives you reproducible builds without manually specifying version constraints for every dependency.
+When using the bhc backend, bhc Platform snapshots provide a set of packages verified to build and work together. This gives you reproducible builds without manually specifying version constraints for every dependency.
 
 ## Quick Start
 
@@ -34,7 +34,7 @@ snapshot = "bhc-platform-2026.1"
 
 ## How It Works
 
-1. **Embedded snapshots** — BHC Platform data is embedded in hx, so no network fetch is required
+1. **Embedded snapshots** — bhc Platform data is embedded in hx, so no network fetch is required
 2. **Version pinning** — When you run `hx lock`, package versions from the snapshot are pinned in the resolver
 3. **Lockfile recording** — The lockfile records which snapshot was used for reproducibility
 4. **Hackage fallback** — Packages not in the snapshot can be resolved from Hackage if `allow_newer = true`
@@ -43,9 +43,9 @@ snapshot = "bhc-platform-2026.1"
 
 ### bhc-platform-2026.1
 
-The initial BHC Platform snapshot:
+The initial bhc Platform snapshot:
 
-- **BHC version:** 0.1.0
+- **bhc version:** 0.1.0
 - **GHC compatibility:** 9.8.2
 - **Packages:** ~70
 
@@ -95,21 +95,21 @@ extra_deps = { my-custom-lib = "1.0.0" }
 | `allow_newer` | bool | `false` | Allow packages from Hackage outside the snapshot |
 | `extra_deps` | table | `{}` | Override specific package versions |
 
-## BHC Platform vs Stackage
+## bhc Platform vs Stackage
 
-| Feature | BHC Platform | Stackage |
+| Feature | bhc Platform | Stackage |
 |---------|-------------|----------|
-| **For** | BHC backend | GHC backend |
+| **For** | bhc backend | GHC backend |
 | **Delivery** | Embedded in hx | Fetched from stackage.org |
 | **Package count** | ~70 (curated) | ~3000+ |
 | **Offline** | Yes | After first fetch |
 | **Configuration** | `[bhc-platform]` | `[toolchain].resolver` |
 
-Use BHC Platform when `[compiler].backend = "bhc"`. Use Stackage when using GHC.
+Use bhc Platform when `[compiler].backend = "bhc"`. Use Stackage when using GHC.
 
 ## Project Templates
 
-The `numeric` and `server` project templates come pre-configured with BHC Platform:
+The `numeric` and `server` project templates come pre-configured with bhc Platform:
 
 ```bash
 # Numeric computing project
@@ -142,21 +142,21 @@ error: Could not resolve dependency: some-package
 
 Set `allow_newer = true` in `[bhc-platform]` to allow resolving from Hackage, or add the package to `extra_deps`.
 
-### BHC not installed
+### bhc not installed
 
 ```
-error: BHC is not installed
+error: bhc is not installed
 ```
 
-Install BHC with `hx toolchain install --bhc latest`.
+Install bhc with `hx toolchain install --bhc latest`.
 
 ### Using with GHC backend
 
-BHC Platform snapshots are only applied when `[compiler].backend = "bhc"`. If you're using GHC, configure a [Stackage resolver](@/docs/features/lockfiles.md) instead.
+bhc Platform snapshots are only applied when `[compiler].backend = "bhc"`. If you're using GHC, configure a [Stackage resolver](@/docs/features/lockfiles.md) instead.
 
 ## See Also
 
-- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC and BHC overview
+- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC and bhc overview
 - [hx bhc-platform](@/docs/commands/bhc-platform.md) — Command reference
 - [hx.toml Reference](@/docs/configuration/hx-toml.md) — Configuration details
-- [hx new](@/docs/commands/new.md) — BHC project templates
+- [hx new](@/docs/commands/new.md) — bhc project templates

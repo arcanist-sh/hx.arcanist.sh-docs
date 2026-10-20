@@ -208,7 +208,7 @@ hx build --backend ghc
 
 Uses `cabal build` under the hood.
 
-### BHC
+### bhc
 
 ```bash
 hx build --backend bhc

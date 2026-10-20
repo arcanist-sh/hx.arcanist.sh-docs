@@ -3,7 +3,7 @@ title = "hx toolchain"
 weight = 30
 +++
 
-Manage Haskell toolchains (GHC, Cabal, BHC).
+Manage Haskell toolchains (GHC, Cabal, bhc).
 
 ## Synopsis
 
@@ -23,7 +23,7 @@ hx toolchain <SUBCOMMAND> [OPTIONS]
 
 ## hx toolchain install
 
-Install GHC, Cabal, or BHC.
+Install GHC, Cabal, or bhc.
 
 ### Synopsis
 
@@ -36,7 +36,7 @@ hx toolchain install [OPTIONS]
 ```
     --ghc <VERSION>     GHC version to install
     --cabal <VERSION>   Cabal version to install
-    --bhc <VERSION>     BHC version to install
+    --bhc <VERSION>     bhc version to install
     --recommended       Install recommended versions
     --direct            Download directly (skip ghcup)
 -v, --verbose           Show detailed output
@@ -54,7 +54,7 @@ hx toolchain install --ghc 9.8.2
 # Install GHC and Cabal together
 hx toolchain install --ghc 9.8.2 --cabal 3.10.3.0
 
-# Install BHC
+# Install bhc
 hx toolchain install --bhc 0.2.0
 
 # Direct download (without ghcup)
@@ -76,7 +76,7 @@ hx toolchain remove [OPTIONS]
 ```
     --ghc <VERSION>     GHC version to remove
     --cabal <VERSION>   Cabal version to remove
-    --bhc <VERSION>     BHC version to remove
+    --bhc <VERSION>     bhc version to remove
     --all               Remove all versions
 ```
 
@@ -86,7 +86,7 @@ hx toolchain remove [OPTIONS]
 # Remove specific GHC version
 hx toolchain remove --ghc 9.6.4
 
-# Remove BHC
+# Remove bhc
 hx toolchain remove --bhc 0.1.0
 ```
 
@@ -105,7 +105,7 @@ hx toolchain list [OPTIONS]
 ```
     --ghc               Show only GHC versions
     --cabal             Show only Cabal versions
-    --bhc               Show only BHC versions
+    --bhc               Show only bhc versions
     --json              Output as JSON
 ```
 
@@ -126,7 +126,7 @@ Cabal versions:
   3.10.3.0 (active)
   3.8.1.0
 
-BHC versions:
+bhc versions:
   0.2.0 (active)
 ```
 
@@ -145,7 +145,7 @@ hx toolchain use [OPTIONS]
 ```
     --ghc <VERSION>     Set active GHC version
     --cabal <VERSION>   Set active Cabal version
-    --bhc <VERSION>     Set active BHC version
+    --bhc <VERSION>     Set active bhc version
 ```
 
 ### Examples
@@ -154,7 +154,7 @@ hx toolchain use [OPTIONS]
 # Set active GHC
 hx toolchain use --ghc 9.8.2
 
-# Set active BHC
+# Set active bhc
 hx toolchain use --bhc 0.2.0
 ```
 
@@ -173,7 +173,7 @@ hx toolchain available [OPTIONS]
 ```
     --ghc               Show available GHC versions
     --cabal             Show available Cabal versions
-    --bhc               Show available BHC versions
+    --bhc               Show available bhc versions
     --all               Show all available versions
 ```
 
@@ -231,7 +231,7 @@ Benefits:
 | macOS | aarch64 | ✓ |
 | Windows | x86_64 | ✓ |
 
-### BHC Platforms
+### bhc Platforms
 
 | Platform | Architecture | Status |
 |----------|-------------|--------|

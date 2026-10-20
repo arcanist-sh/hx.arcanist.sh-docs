@@ -12,7 +12,7 @@ hx provides a unified interface for different compilers:
 | Backend | Description | Best For |
 |---------|-------------|----------|
 | **GHC** | Standard Haskell compiler | Most projects, libraries |
-| **BHC** | Basel Haskell Compiler | Numerical computing, ML |
+| **bhc** | Basel Haskell Compiler | Numerical computing, ML |
 
 ## GHC Backend (Default)
 
@@ -47,9 +47,9 @@ hx build --backend ghc
 - HLS (Haskell Language Server) integration
 - Extensive profiling tools
 
-## BHC Backend
+## bhc Backend
 
-BHC (Basel Haskell Compiler) is an alternative compiler optimized for numerical computing and machine learning workloads.
+bhc (Basel Haskell Compiler) is an alternative compiler optimized for numerical computing and machine learning workloads.
 
 ### Configuration
 
@@ -66,26 +66,26 @@ target = "aarch64-linux-gnu" # Cross-compilation target
 
 ### Usage
 
-All major commands support the BHC backend:
+All major commands support the bhc backend:
 
 ```bash
-# Build with BHC
+# Build with bhc
 hx build --backend bhc
 
-# Test with BHC
+# Test with bhc
 hx test --backend bhc
 
-# Run with BHC
+# Run with bhc
 hx run --backend bhc
 
-# Set in hx.toml to always use BHC
+# Set in hx.toml to always use bhc
 # [compiler]
 # backend = "bhc"
 ```
 
-### BHC Profiles
+### bhc Profiles
 
-BHC offers specialized optimization profiles:
+bhc offers specialized optimization profiles:
 
 #### Default Profile
 
@@ -139,7 +139,7 @@ Optimized for:
 - Embedded systems
 - Edge computing
 
-### BHC-Specific Options
+### bhc-specific options
 
 #### Kernel Reports
 
@@ -163,9 +163,9 @@ tensor_fusion = true
 
 This optimizes chains of array operations.
 
-### BHC Targets
+### bhc Targets
 
-BHC supports these compilation targets:
+bhc supports these compilation targets:
 
 | Target | Description |
 |--------|-------------|
@@ -212,11 +212,11 @@ hx build
 | Backend | Debug | Release |
 |---------|-------|---------|
 | GHC | Fast | Moderate |
-| BHC | Moderate | Fast (for numeric) |
+| bhc | Moderate | Fast (for numeric) |
 
 ### Runtime Performance
 
-| Workload | GHC | BHC |
+| Workload | GHC | bhc |
 |----------|-----|-----|
 | General | Excellent | Good |
 | Numeric | Good | Excellent |
@@ -228,11 +228,11 @@ hx build
 | Backend | Size |
 |---------|------|
 | GHC | Moderate |
-| BHC (edge) | Small |
+| bhc (edge) | Small |
 
 ### Ecosystem Support
 
-| Feature | GHC | BHC |
+| Feature | GHC | bhc |
 |---------|-----|-----|
 | Hackage packages | All | Most |
 | HLS | Yes | No |
@@ -247,7 +247,7 @@ hx build
 hx toolchain install --ghc 9.8.2
 ```
 
-### Install BHC
+### Install bhc
 
 ```bash
 hx toolchain install --bhc 0.2.0
@@ -269,7 +269,7 @@ hx toolchain list
 - Maximum ecosystem compatibility
 - Detailed profiling needed
 
-### Use BHC When
+### Use bhc When
 
 - Building ML/data science applications
 - Heavy numerical computation
@@ -277,9 +277,9 @@ hx toolchain list
 - Optimizing for embedded/edge
 - Cross-compiling to ARM
 
-## BHC Platform Snapshots
+## bhc Platform Snapshots
 
-BHC Platform provides curated package sets — the BHC equivalent of Stackage. Each snapshot contains packages verified to build and work together under BHC.
+bhc Platform provides curated package sets — the bhc equivalent of Stackage. Each snapshot contains packages verified to build and work together under bhc.
 
 ### Configuration
 
@@ -309,13 +309,13 @@ hx bhc-platform set bhc-platform-2026.1
 
 ### Lock Integration
 
-When a BHC Platform snapshot is configured, `hx lock` pins package versions from the snapshot into the resolver, providing reproducible builds without manually specifying constraints.
+When a bhc Platform snapshot is configured, `hx lock` pins package versions from the snapshot into the resolver, providing reproducible builds without manually specifying constraints.
 
 See [hx bhc-platform](@/docs/commands/bhc-platform.md) for the full command reference.
 
-## BHC Project Templates
+## bhc Project Templates
 
-hx includes project templates optimized for BHC:
+hx includes project templates optimized for bhc:
 
 ```bash
 # Numeric computing (hmatrix, vector, massiv, statistics)
@@ -325,7 +325,7 @@ hx new numeric my-science
 hx new server my-api
 ```
 
-You can also create standard templates with BHC:
+You can also create standard templates with bhc:
 
 ```bash
 hx init --backend bhc
@@ -336,7 +336,7 @@ hx new library my-lib --backend bhc
 
 ## Example: ML Project
 
-A project using BHC for ML workloads:
+A project using bhc for ML workloads:
 
 ```toml
 # hx.toml
@@ -375,7 +375,7 @@ cat .hx/bhc-reports/kernel-report.txt
 ## See Also
 
 - [hx build](@/docs/commands/build.md) — Build command
-- [hx bhc-platform](@/docs/commands/bhc-platform.md) — BHC Platform snapshots
+- [hx bhc-platform](@/docs/commands/bhc-platform.md) — bhc Platform snapshots
 - [hx new](@/docs/commands/new.md) — Project templates
 - [Cross-Compilation](@/docs/features/cross-compilation.md) — Building for other platforms
 - [Toolchain Management](@/docs/features/toolchain.md) — Managing compilers

@@ -68,14 +68,14 @@ hx new webapp my-app
 # CLI tool
 hx new cli my-tool
 
-# Numeric computing (BHC backend, hmatrix, vector, massiv)
+# Numeric computing (bhc backend, hmatrix, vector, massiv)
 hx new numeric my-science
 
-# Web server (BHC backend, Servant, Warp, WAI)
+# Web server (bhc backend, Servant, Warp, WAI)
 hx new server my-api
 ```
 
-The `numeric` and `server` templates use the BHC backend with optimized profiles. See [Compiler Backends](@/docs/features/compiler-backends.md) for more on BHC.
+The `numeric` and `server` templates use the bhc backend with optimized profiles. See [Compiler Backends](@/docs/features/compiler-backends.md) for more on bhc.
 
 ## Build Your Project
 

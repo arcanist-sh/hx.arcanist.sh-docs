@@ -131,7 +131,7 @@ my-minimal/
 hx new my-project --ghc 9.8.2
 ```
 
-### With BHC Backend
+### With bhc Backend
 
 ```bash
 hx new ml-project --backend bhc
@@ -151,14 +151,14 @@ hx new cli my-tool
 # Library
 hx new library my-lib
 
-# Numeric computing (BHC, hmatrix, vector, massiv)
+# Numeric computing (bhc, hmatrix, vector, massiv)
 hx new numeric my-science
 
-# Web server (BHC, Servant, Warp, WAI)
+# Web server (bhc, Servant, Warp, WAI)
 hx new server my-api
 ```
 
-The `numeric` and `server` templates automatically configure the BHC backend with optimized profiles. The `webapp`, `cli`, and `library` templates accept `--backend bhc` to use BHC instead of GHC.
+The `numeric` and `server` templates automatically configure the bhc backend with optimized profiles. The `webapp`, `cli`, and `library` templates accept `--backend bhc` to use bhc instead of GHC.
 
 ### With Author Information
 
@@ -283,7 +283,7 @@ hx test
 
 ### numeric
 
-Creates a BHC-optimized numeric computing project:
+Creates a bhc-optimized numeric computing project:
 
 ```
 my-science/
@@ -300,7 +300,7 @@ my-science/
 
 ### server
 
-Creates a BHC-optimized web server project:
+Creates a bhc-optimized web server project:
 
 ```
 my-api/
@@ -321,5 +321,5 @@ my-api/
 ## See Also
 
 - [hx init](@/docs/commands/init.md) — Initialize hx in existing project
-- [hx bhc-platform](@/docs/commands/bhc-platform.md) — Manage BHC Platform snapshots
+- [hx bhc-platform](@/docs/commands/bhc-platform.md) — Manage bhc Platform snapshots
 - [Quick Start](@/docs/quickstart.md) — Getting started guide

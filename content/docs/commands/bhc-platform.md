@@ -3,7 +3,7 @@ title = "hx bhc-platform"
 weight = 22
 +++
 
-Manage BHC Platform curated snapshots.
+Manage bhc Platform curated snapshots.
 
 ## Synopsis
 
@@ -13,13 +13,13 @@ hx bhc-platform <COMMAND>
 
 ## Description
 
-The `bhc-platform` command manages BHC Platform curated snapshots — Stackage-like package sets optimized for the BHC (Basel Haskell Compiler) backend. Each snapshot provides a set of packages verified to build and work together under BHC.
+The `bhc-platform` command manages bhc Platform curated snapshots — Stackage-like package sets optimized for the bhc (Basel Haskell Compiler) backend. Each snapshot provides a set of packages verified to build and work together under bhc.
 
 ## Subcommands
 
 ### list
 
-List all available BHC Platform snapshots.
+List all available bhc Platform snapshots.
 
 ```bash
 hx bhc-platform list
@@ -28,9 +28,9 @@ hx bhc-platform list
 **Output:**
 
 ```
-  Available  BHC Platform snapshots
+  Available  bhc Platform snapshots
 
-  bhc-platform-2026.1 (BHC 0.1.0, GHC-compat 9.8.2, 70 packages)
+  bhc-platform-2026.1 (bhc 0.1.0, GHC-compat 9.8.2, 70 packages)
 
 Set a platform with: hx bhc-platform set <platform>
 ```
@@ -66,13 +66,13 @@ hx bhc-platform info bhc-platform-2026.1 --packages
 
   GHC compatibility: 9.8.2
   Packages:          70
-  BHC version:       0.1.0
+  bhc version:       0.1.0
   Recommended profile: default
 ```
 
 ### set
 
-Set the BHC Platform snapshot for the current project.
+Set the bhc Platform snapshot for the current project.
 
 ```bash
 hx bhc-platform set <PLATFORM>
@@ -89,14 +89,14 @@ hx bhc-platform set bhc-platform-2026.1
 **Output:**
 
 ```
-  Set  BHC Platform to bhc-platform-2026.1 (70 packages, BHC 0.1.0)
+  Set  bhc Platform to bhc-platform-2026.1 (70 packages, bhc 0.1.0)
 ```
 
 ## Available Snapshots
 
 ### bhc-platform-2026.1
 
-The initial BHC Platform snapshot, curated for BHC 0.1.0 with GHC 9.8.2 compatibility. Contains ~70 packages covering:
+The initial bhc Platform snapshot, curated for bhc 0.1.0 with GHC 9.8.2 compatibility. Contains ~70 packages covering:
 
 | Category | Key Packages |
 |----------|-------------|
@@ -129,7 +129,7 @@ extra_deps = {}
 
 ## How It Works
 
-1. BHC Platform snapshots are embedded in hx (no network fetch required)
+1. bhc Platform snapshots are embedded in hx (no network fetch required)
 2. When you run `hx lock` with a snapshot configured and `backend = "bhc"`, package versions from the snapshot are pinned in the resolver
 3. The lockfile records which snapshot was used
 4. Additional dependencies from Hackage can be allowed with `allow_newer = true`
@@ -149,7 +149,7 @@ extra_deps = {}
 
 ## See Also
 
-- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC and BHC support
+- [Compiler Backends](@/docs/features/compiler-backends.md) — GHC and bhc support
 - [hx.toml Reference](@/docs/configuration/hx-toml.md) — `[bhc-platform]` configuration
 - [hx lock](@/docs/commands/lock.md) — Generate lockfile with snapshot pinning
-- [hx new](@/docs/commands/new.md) — Create projects with BHC templates
+- [hx new](@/docs/commands/new.md) — Create projects with bhc templates

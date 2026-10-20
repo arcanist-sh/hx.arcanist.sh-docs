@@ -105,7 +105,7 @@ export HX_CABAL=/opt/cabal/3.10/bin/cabal
 
 ### HX_BHC
 
-Override BHC executable:
+Override bhc executable:
 
 ```bash
 export HX_BHC=/opt/bhc/0.2.0/bin/bhc
