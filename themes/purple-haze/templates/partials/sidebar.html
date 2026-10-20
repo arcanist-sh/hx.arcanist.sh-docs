@@ -64,6 +64,15 @@
                         </a>
                     </li>
                     {% endfor %}
+                    {#- Nested sections (Internals → Compiler, Runtime, …) link to their own index pages. -#}
+                    {% for nested_path in subsection.subsections %}
+                    {% set nested = get_section(path=nested_path) %}
+                    <li class="toc__item">
+                        <a href="{{ nested.permalink | safe }}" class="toc__link {% if current_path is defined and current_path is starting_with(nested.path) %}active{% endif %}">
+                            {{ nested.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
             {% endfor %}
@@ -137,7 +146,8 @@
             {% endif %}
         </div>
 
-        {# Print button #}
+        {#- Print button: only for sites with a print page (content/print.md using print.html, book-style root pages). -#}
+        {% if config.extra.print_page | default(value=false) %}
         <a href="{{ get_url(path='print') | safe }}?auto=true" class="print-button" target="_blank" rel="noopener" aria-label="Print all documentation pages (opens print dialog)">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="6 9 6 2 18 2 18 9"/>
@@ -146,5 +156,6 @@
             </svg>
             <span>Print all pages</span>
         </a>
+        {% endif %}
     </div>
 </aside>

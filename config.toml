@@ -210,7 +210,7 @@ text = "hx blog"
 url = "https://arcanist.sh/hx/blog/"
 [[extra.footer.links.links]]
 text = "BHC blog"
-url = "https://arcanist.sh/blog/#bhc"
+url = "https://arcanist.sh/bhc/blog/"
 [[extra.footer.links.links]]
 text = "Atom feed"
 url = "https://arcanist.sh/blog/atom.xml"

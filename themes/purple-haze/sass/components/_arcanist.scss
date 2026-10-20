@@ -1,7 +1,8 @@
 // =============================================================================
-// arcanist.sh look for the hx docs (loaded last)
-// The family type (Funnel Display headlines, Geist body), hx teal as the only accent, the hx lockup with an outlined
-// "docs" key, and the arcanist.sh code palette. Mirrors www.arcanist.sh (sass/components/_shell.scss, _hx.scss).
+// arcanist.sh look for the product docs (loaded last)
+// The family type (Funnel Display headlines, Geist body), the product's colour as the only accent (hx teal; BHC mauve
+// with data-product="bhc"), the product lockup with an outlined "docs" key, and the arcanist.sh code palette.
+// Mirrors www.arcanist.sh (sass/components/_shell.scss, _hx.scss, _bhc.scss). --hx is the accent, whatever the product.
 // =============================================================================
 
 :root {
@@ -33,6 +34,23 @@
   --color-info: var(--hx);
 }
 
+// BHC docs: the same rules in BHC mauve
+[data-product="bhc"] {
+  --hx: #cba6f7;
+  --hx-deep: #8839ef;
+  --color-accent-hover: #b4befe;
+  --color-link-hover: #b4befe;
+  --color-primary-hover: #b4befe;
+}
+
+[data-product="bhc"][data-theme="light"] {
+  --hx: #8839ef;
+  --hx-deep: #6a1fd0;
+  --color-accent-hover: #6a1fd0;
+  --color-link-hover: #6a1fd0;
+  --color-primary-hover: #6a1fd0;
+}
+
 // --- Type ---
 h1, h2, h3, h4 {
   font-family: var(--font-display);
@@ -53,8 +71,8 @@ h2 { border-bottom: 0; padding-bottom: 0; }
   text-transform: none;
 }
 
-// --- Header lockup: hx (teal) + outlined "docs" key ---
-.header__logo--hx {
+// --- Header lockup: the product lockup in its accent + outlined "docs" key ---
+.header__logo--product {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -68,7 +86,7 @@ h2 { border-bottom: 0; padding-bottom: 0; }
   gap: 0.5rem;
   color: var(--hx);
 
-  .hx-lockup { display: block; height: 26px; width: auto; }
+  .hx-lockup, .bhc-lockup { display: block; height: 26px; width: auto; }
 }
 
 .docs-key {
@@ -94,7 +112,7 @@ h2 { border-bottom: 0; padding-bottom: 0; }
   color: var(--color-text-muted);
 }
 
-// Active and hovered sidebar entries carry the hx teal.
+// Active and hovered sidebar entries carry the accent.
 .sidebar a[aria-current="page"],
 .sidebar .active > a,
 .sidebar a.active {
@@ -105,7 +123,7 @@ h2 { border-bottom: 0; padding-bottom: 0; }
 
 .sidebar a:hover { color: var(--color-heading); }
 
-// Links in running text: underlined, teal on hover.
+// Links in running text: underlined, accent on hover.
 .content a:not(.btn):not(.zola-anchor),
 .docs-content a:not(.btn):not(.zola-anchor) {
   color: var(--color-heading);
@@ -542,7 +560,7 @@ code:not(pre code) { color: var(--color-heading); }
 
 // =============================================================================
 // "On this page": a sticky right rail on wide screens, like the article rail on arcanist.sh
-// (mono label, small muted links, the section in view in teal). Below 1280px it stays the last sidebar group.
+// (mono label, small muted links, the section in view in the accent). Below 1280px it stays the last sidebar group.
 // =============================================================================
 
 .page-toc-panel {

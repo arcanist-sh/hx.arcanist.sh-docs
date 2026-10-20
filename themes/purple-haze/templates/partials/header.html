@@ -193,9 +193,10 @@
         {% endif %}
 
         {# Logo / Title #}
-        <a href="{{ config.base_url | safe }}" class="header__logo{% if config.extra.lockup | default(value="") == "hx" %} header__logo--hx{% endif %}" aria-label="{{ config.title }} - Go to homepage">
-            {#- hx docs: the hx lockup in teal with an outlined "docs" key, the hx sibling of the arcanist.sh docs hub lockup. -#}
-            {% if config.extra.lockup | default(value="") == "hx" %}<span class="docs-lockup">{% include "partials/hx-lockup.html" %}<span class="docs-key">docs</span></span>{% else %}{{ brandmark::logo() }}{% endif %}
+        <a href="{{ config.base_url | safe }}" class="header__logo{% if config.extra.lockup | default(value="") in ["hx", "bhc"] %} header__logo--product{% endif %}" aria-label="{{ config.title }} - Go to homepage">
+            {#- Product docs: the product lockup in its accent with an outlined "docs" key, the sibling of the arcanist.sh docs hub lockup. -#}
+            {% set lockup = config.extra.lockup | default(value="") %}
+            {% if lockup == "hx" %}<span class="docs-lockup">{% include "partials/hx-lockup.html" %}<span class="docs-key">docs</span></span>{% elif lockup == "bhc" %}<span class="docs-lockup">{% include "partials/bhc-lockup.html" %}<span class="docs-key">docs</span></span>{% else %}{{ brandmark::logo() }}{% endif %}
         </a>
     </div>
 
