@@ -88,6 +88,22 @@ Regular build commands use the lockfile automatically:
 hx build  # Uses versions from hx.lock
 ```
 
+When `hx.lock` is current, `hx build`, `test`, `run`, `check` and `repl` hand cabal the plan it pins: the index state, every version and every flag. When the lockfile no longer matches the project, hx says what changed, suggests `hx lock`, and lets cabal plan as before.
+
+### Require a Current Lockfile (CI)
+
+```bash
+hx build --locked
+HX_LOCKED=1 hx test
+```
+
+With `--locked` (or `HX_LOCKED=1`), a missing or out-of-date `hx.lock` fails the command with exit code 3 instead of a suggestion, and cached sources whose hashes do not match the lock are refused, as with `hx sync`. Use it next to `hx lock --check`:
+
+```yaml
+- run: hx lock --check
+- run: hx test --locked
+```
+
 ## Updating Dependencies
 
 ### Update All
