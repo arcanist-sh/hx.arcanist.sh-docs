@@ -140,11 +140,13 @@
       // Make pre relative for absolute positioning
       pre.style.position = 'relative';
 
-      // Get language from class (e.g., "language-javascript")
+      // Language from a "language-*" class, or from data-lang (Zola 0.22 / giallo puts it on <code>).
+      // Shell dialects read as "shell"; untyped blocks get no label.
       const langClass = Array.from(code.classList).find(c => c.startsWith('language-'));
-      if (langClass) {
-        const lang = langClass.replace('language-', '');
-        pre.setAttribute('data-lang', getLanguageName(lang) || lang);
+      let lang = langClass ? langClass.replace('language-', '') : code.dataset.lang;
+      if (lang === 'shellscript' || lang === 'shellsession' || lang === 'sh' || lang === 'bash') lang = 'shell';
+      if (lang && lang !== 'plain' && lang !== 'text' && lang !== 'txt') {
+        pre.setAttribute('data-lang', lang.toLowerCase());
       }
 
       // Create copy button

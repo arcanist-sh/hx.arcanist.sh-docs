@@ -296,13 +296,40 @@
         {% set fixed_header = mode == "docs" or mode == "product" %}
     {% endif %}
 
+    {#- Docs: the header spans the full width above the sidebar and the page, as on arcanist.sh. -#}
+    {% if mode == "docs" %}
+    <div class="layout-header" data-mode="{{ mode }}">
+        {% include "partials/header.html" %}
+    </div>
+    {% endif %}
+
     {# Layout wrapper #}
     <div class="layout layout--{{ mode }}{% if fixed_header %} layout--fixed-header{% endif %}" data-mode="{{ mode }}">
         {% block sidebar %}{% endblock %}
 
         <div class="layout__main">
+            {% if mode == "docs" %}
+            {#- Shown only while the sidebar is collapsed: just below the navbar, at the left edge. Sticky inside the
+                layout, so it leaves with the page when the footer comes up. -#}
+            <div class="sidebar-reopen">
+                <button class="sidebar-toggle sidebar-toggle--reopen" type="button" aria-label="Show table of contents" aria-expanded="false" aria-controls="sidebar" title="Show table of contents">
+                    <svg class="sidebar-toggle__icon sidebar-toggle__icon--open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="3" rx="2"/>
+                <path d="M9 3v18"/>
+                <path d="m16 15-3-3 3-3"/>
+            </svg>
+            <svg class="sidebar-toggle__icon sidebar-toggle__icon--closed" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="3" rx="2"/>
+                <path d="M9 3v18"/>
+                <path d="m14 9 3 3-3 3"/>
+            </svg>
+                </button>
+            </div>
+            {% endif %}
             {% block header %}
+            {% if mode != "docs" %}
             {% include "partials/header.html" %}
+            {% endif %}
             {% endblock %}
 
             {# Scroll Progress Indicator - docs mode only #}
@@ -334,6 +361,12 @@
         </div>
     </div>
 
+    {#- Docs: the arcanist.sh footer sits outside the layout, full width below both the sidebar and the page. The
+        sticky sidebar stays pinned while the page scrolls and leaves with it when the layout ends. -#}
+    {% if mode == "docs" and config.extra.footer.links %}
+    {% include "partials/site-footer.html" %}
+    {% endif %}
+
     {# Sidebar overlay for mobile #}
     <div class="sidebar-overlay" aria-hidden="true"></div>
 
@@ -352,24 +385,7 @@
     {% include "partials/nav-overlay.html" %}
     {% endif %}
 
-    {# Page ToC toggle button - docs mode only, fixed position #}
-    {% set has_toc = (page and page.toc) or (section and section.toc) %}
-    {% if mode == "docs" and has_toc %}
-    <button class="page-toc-toggle" type="button" aria-label="Toggle table of contents" aria-expanded="false" aria-controls="page-toc-panel" title="On this page">
-        <svg class="page-toc-toggle__icon page-toc-toggle__icon--list" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M16 5H3"/>
-            <path d="M16 12H3"/>
-            <path d="M16 19H3"/>
-            <path d="M21 5h.01"/>
-            <path d="M21 12h.01"/>
-            <path d="M21 19h.01"/>
-        </svg>
-        <svg class="page-toc-toggle__icon page-toc-toggle__icon--close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M18 6 6 18"/>
-            <path d="m6 6 12 12"/>
-        </svg>
-    </button>
-    {% endif %}
+    {#- "On this page" is a right rail on wide screens (partials/page-toc-panel.html) and the last sidebar group below. -#}
 
     {# Scroll to top button (not for book mode) #}
     {% if mode != "book" %}

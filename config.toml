@@ -2,8 +2,8 @@
 # https://www.getzola.org/documentation/getting-started/configuration/
 
 base_url = "https://docs.arcanist.sh/hx"
-title = "hx Documentation"
-description = "Documentation for hx, the extremely fast Haskell package and project manager."
+title = "hx docs"
+description = "Documentation for hx, the whole Haskell toolchain in one fast binary: installation, commands, hx.toml, lockfiles, workspaces and guides."
 default_language = "en"
 theme = "purple-haze"
 
@@ -25,6 +25,8 @@ external_links_no_referrer = true
 
 [markdown.highlighting]
 enabled = true
+# Emit scope classes; the arcanist.sh palette lives in themes/purple-haze/sass/components/_arcanist.scss
+style = "class"
 light_theme = "catppuccin-latte"
 dark_theme = "catppuccin-mocha"
 
@@ -42,6 +44,10 @@ index_format = "elasticlunr_javascript"
 [extra]
 # Theme mode
 mode = "docs"
+# Header lockup: the hx mark and wordmark with an outlined "docs" key
+lockup = "hx"
+# The colour-scheme switch lives in the footer, not the header (as on arcanist.sh)
+show_theme_toggle = false
 
 # Site metadata
 author = "arcanist.sh"
@@ -60,12 +66,196 @@ versioned = false
 default_version = "latest"
 
 # Navigation
+# Header navigation: the same menu as arcanist.sh (www.arcanist.sh/config.toml), with absolute URLs.
 [[extra.nav_links]]
-name = "Home"
-url = "https://arcanist.sh/hx"
+name = "Get started"
+url = "https://arcanist.sh/get-started/"
 external = true
 
 [[extra.nav_links]]
-name = "GitHub"
-url = "https://github.com/arcanist-sh/hx"
+name = "Products"
+[[extra.nav_links.children]]
+name = "hx"
+url = "https://arcanist.sh/hx/"
+external = true
+[[extra.nav_links.children]]
+name = "BHC"
+url = "https://arcanist.sh/bhc/"
+external = true
+[[extra.nav_links.children]]
+name = "hx vs Cabal & Stack"
+url = "https://arcanist.sh/hx-vs-cabal-and-stack/"
+external = true
+[[extra.nav_links.children]]
+name = "BHC vs GHC"
+url = "https://arcanist.sh/bhc-vs-ghc/"
+external = true
+
+[[extra.nav_links]]
+name = "Learn"
+[[extra.nav_links.children]]
+name = "Manifesto"
+url = "https://arcanist.sh/manifesto/"
+external = true
+[[extra.nav_links.children]]
+name = "Use cases"
+url = "https://arcanist.sh/use-cases/"
+external = true
+[[extra.nav_links.children]]
+name = "Glossary"
+url = "https://arcanist.sh/glossary/"
+external = true
+[[extra.nav_links.children]]
+name = "About"
+url = "https://arcanist.sh/about/"
+external = true
+[[extra.nav_links.children]]
+name = "Team"
+url = "https://arcanist.sh/team/"
+external = true
+
+[[extra.nav_links]]
+name = "Blog"
+url = "https://arcanist.sh/blog/"
+external = true
+
+[[extra.nav_links]]
+name = "Docs"
+url = "https://docs.arcanist.sh/"
+external = true
+
+# ---------------------------------------------------------------------------
+# Footer: the arcanist.sh site footer (themes/purple-haze/templates/partials/site-footer.html).
+# Same about text and link groups as www.arcanist.sh/config.toml, with absolute URLs.
+# ---------------------------------------------------------------------------
+[extra.footer]
+here = "hx"
+note = "hx is MIT-licensed, BHC is BSD-3-Clause"
+about = """
+arcanist.sh builds Haskell tooling for the age of AI-authored code. [hx](https://arcanist.sh/hx/) is a fast package and project manager written in Rust: build, test, run, format, lint and publish from one tool, with managed GHC and BHC toolchains and deterministic lockfiles. [BHC](https://arcanist.sh/bhc/), the Basel Haskell Compiler, is a clean-slate compiler written in Rust that already compiles all of Pandoc to a binary that runs.
+"""
+
+[[extra.footer.links]]
+title = "Products"
+[[extra.footer.links.links]]
+text = "hx"
+url = "https://arcanist.sh/hx/"
+[[extra.footer.links.links]]
+text = "BHC"
+url = "https://arcanist.sh/bhc/"
+[[extra.footer.links.links]]
+text = "hx docs"
+url = "https://docs.arcanist.sh/hx/"
+external = true
+[[extra.footer.links.links]]
+text = "BHC docs"
+url = "https://docs.arcanist.sh/bhc/"
+external = true
+[[extra.footer.links.links]]
+text = "Docs hub"
+url = "https://docs.arcanist.sh/"
+external = true
+
+[[extra.footer.links]]
+title = "Learn"
+[[extra.footer.links.links]]
+text = "Get started"
+url = "https://arcanist.sh/get-started/"
+[[extra.footer.links.links]]
+text = "Manifesto"
+url = "https://arcanist.sh/manifesto/"
+[[extra.footer.links.links]]
+text = "The commons"
+url = "https://arcanist.sh/commons/"
+[[extra.footer.links.links]]
+text = "Use cases"
+url = "https://arcanist.sh/use-cases/"
+[[extra.footer.links.links]]
+text = "Glossary"
+url = "https://arcanist.sh/glossary/"
+
+[[extra.footer.links]]
+title = "Compare"
+[[extra.footer.links.links]]
+text = "hx vs Cabal & Stack"
+url = "https://arcanist.sh/hx-vs-cabal-and-stack/"
+[[extra.footer.links.links]]
+text = "BHC vs GHC"
+url = "https://arcanist.sh/bhc-vs-ghc/"
+[[extra.footer.links.links]]
+text = "hx benchmarks"
+url = "https://arcanist.sh/hx/benchmarks/"
+[[extra.footer.links.links]]
+text = "BHC status"
+url = "https://arcanist.sh/bhc/status/"
+
+[[extra.footer.links]]
+title = "Writing"
+[[extra.footer.links.links]]
+text = "All posts"
+url = "https://arcanist.sh/blog/"
+[[extra.footer.links.links]]
+text = "Essays"
+url = "https://arcanist.sh/blog/#essays"
+[[extra.footer.links.links]]
+text = "hx blog"
+url = "https://arcanist.sh/hx/blog/"
+[[extra.footer.links.links]]
+text = "BHC blog"
+url = "https://arcanist.sh/blog/#bhc"
+[[extra.footer.links.links]]
+text = "Atom feed"
+url = "https://arcanist.sh/blog/atom.xml"
+
+[[extra.footer.links]]
+title = "Releases"
+[[extra.footer.links.links]]
+text = "hx releases"
+url = "https://github.com/arcanist-sh/hx/releases"
+external = true
+[[extra.footer.links.links]]
+text = "hx changelog"
+url = "https://github.com/arcanist-sh/hx/blob/main/CHANGELOG.md"
+external = true
+[[extra.footer.links.links]]
+text = "BHC releases"
+url = "https://github.com/arcanist-sh/bhc/releases"
+external = true
+[[extra.footer.links.links]]
+text = "BHC roadmap"
+url = "https://arcanist.sh/bhc/roadmap/"
+
+[[extra.footer.links]]
+title = "Project"
+[[extra.footer.links.links]]
+text = "About"
+url = "https://arcanist.sh/about/"
+[[extra.footer.links.links]]
+text = "Team"
+url = "https://arcanist.sh/team/"
+[[extra.footer.links.links]]
+text = "Contribute"
+url = "https://github.com/arcanist-sh"
+external = true
+[[extra.footer.links.links]]
+text = "Discussions"
+url = "https://github.com/arcanist-sh/hx/discussions"
+external = true
+icon = "chat"
+
+[[extra.footer.links]]
+title = "Elsewhere"
+[[extra.footer.links.links]]
+text = "GitHub"
+url = "https://github.com/arcanist-sh"
+external = true
+icon = "github"
+[[extra.footer.links.links]]
+text = "X"
+url = "https://x.com/raskell_io"
+external = true
+icon = "x"
+[[extra.footer.links.links]]
+text = "raskell.io"
+url = "https://raskell.io"
 external = true

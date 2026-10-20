@@ -4,17 +4,20 @@ template = "section.html"
 sort_by = "weight"
 +++
 
-Welcome to the hx documentation. **hx** is an extremely fast Haskell package and project manager, written in Rust.
+**hx** is the whole Haskell toolchain in one fast binary. It installs GHC and Cabal, builds, tests, formats and lints your code, pins every dependency by hash, and publishes your packages. It is written in Rust, starts in milliseconds, and works with the `.cabal` files and Hackage you already use.
 
 ## What is hx?
 
-hx is a modern toolchain CLI for Haskell that makes working with Haskell projects simple and fast. It wraps existing Haskell tools (GHC, Cabal, GHCup, HLS) in a unified, ergonomic interface with:
+hx drives GHC and Cabal rather than replacing them, and adds what they leave to you:
 
-- **Fast feedback loops** — Common workflows are optimized for speed
-- **Deterministic builds** — Lockfile support ensures reproducible builds
-- **Excellent error messages** — Actionable diagnostics with suggested fixes
-- **Batteries included** — Format, lint, test, and document out of the box
-- **Multiple compiler backends** — Support for both GHC and BHC
+- **Managed toolchains**: GHC, Cabal and HLS from the release metadata ghcup publishes, with every download verified
+- **Verifiable lockfiles**: every dependency pinned by source hash and Hackage revision, with offline builds and a CI check
+- **Workspaces**: multi-package projects with `cabal.project` as the single member list, and `--changed` to act only on what a branch affects
+- **Batteries included**: format, lint, test, coverage, profiling, documentation and publishing in one tool
+- **Agents**: an MCP server (`hx mcp`) that exposes the same commands to AI agents
+- **Two compilers**: GHC by default, and [BHC](https://arcanist.sh/bhc/) with one setting
+
+New here? Start with [Installation](@/docs/installation.md) and the [Quick Start](@/docs/quickstart.md). The overview, benchmarks and release notes live on [arcanist.sh/hx](https://arcanist.sh/hx/).
 
 ## Documentation Sections
 

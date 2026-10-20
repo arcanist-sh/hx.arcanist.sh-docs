@@ -16,7 +16,7 @@
   function initSidebar() {
     const sidebar = document.querySelector('.sidebar');
     const overlay = document.querySelector('.sidebar-overlay');
-    const headerToggleBtn = document.querySelector('.header .sidebar-toggle');
+    const toggleBtns = document.querySelectorAll('.sidebar-toggle');
     const tocToggleBtn = document.querySelector('.toc-toggle--docs'); // Mobile ToC button for docs
     const closeBtn = document.querySelector('.sidebar__close');
 
@@ -31,7 +31,7 @@
         const isCollapsed = localStorage.getItem(STORAGE_KEY_SIDEBAR) === 'true';
         if (isCollapsed) {
           sidebar.classList.add('collapsed');
-          headerToggleBtn?.setAttribute('aria-expanded', 'false');
+          toggleBtns.forEach((b) => b.setAttribute('aria-expanded', 'false'));
         }
       }
     }
@@ -39,7 +39,7 @@
     // Toggle collapsed state (desktop)
     function toggleCollapsed() {
       const isCollapsed = sidebar.classList.toggle('collapsed');
-      headerToggleBtn?.setAttribute('aria-expanded', !isCollapsed);
+      toggleBtns.forEach((b) => b.setAttribute('aria-expanded', String(!isCollapsed)));
       try {
         localStorage.setItem(STORAGE_KEY_SIDEBAR, isCollapsed);
       } catch (e) {}
@@ -61,7 +61,7 @@
     }
 
     // Header toggle button behavior
-    headerToggleBtn?.addEventListener('click', () => {
+    toggleBtns.forEach((btn) => btn.addEventListener('click', () => {
       if (isDesktop()) {
         // Desktop: toggle collapsed state
         toggleCollapsed();
@@ -73,7 +73,7 @@
           openSidebar();
         }
       }
-    });
+    }));
 
     // Mobile ToC toggle button (docs mode) - always opens sidebar
     tocToggleBtn?.addEventListener('click', () => {
