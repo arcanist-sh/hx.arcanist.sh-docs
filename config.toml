@@ -83,6 +83,10 @@ name = "BHC"
 url = "https://arcanist.sh/bhc/"
 external = true
 [[extra.nav_links.children]]
+name = "Registry"
+url = "https://registry.arcanist.sh/"
+external = true
+[[extra.nav_links.children]]
 name = "hx vs Cabal & Stack"
 url = "https://arcanist.sh/hx-vs-cabal-and-stack/"
 external = true
@@ -143,6 +147,10 @@ url = "https://arcanist.sh/hx/"
 [[extra.footer.links.links]]
 text = "BHC"
 url = "https://arcanist.sh/bhc/"
+[[extra.footer.links.links]]
+text = "Registry"
+url = "https://registry.arcanist.sh/"
+external = true
 [[extra.footer.links.links]]
 text = "hx docs"
 url = "https://docs.arcanist.sh/hx/"
